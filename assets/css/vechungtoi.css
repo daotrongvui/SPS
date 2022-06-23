@@ -1,0 +1,314 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: GilroyBold, sans-serif;
+}
+
+body {
+    padding: 0 !important;
+}
+
+@font-face {
+    font-family: GilroyBold;
+    src: url(../font/SVN-Gilroy\ Bold.otf);
+}
+
+@font-face {
+    font-family: GilroySemiBold;
+    src: url(../font/SVN-Gilroy\ SemiBold.otf);
+}
+
+@font-face {
+    font-family: GilroyMedium;
+    src: url(../font/SVN-Gilroy\ Medium.otf);
+} */
+
+.triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 25px solid #BBBDBF;
+    box-shadow: 5px rgb(0 0 0 / 50%);
+    border-radius: 7px;
+}
+
+/* .subnav-vechungtoi {
+    list-style-type: none;
+    padding: 10px 17px 0 17px;
+    width: 310px;
+    height: 165px;
+    background-color: #FFFFFF;
+    border: 1px solid #BBBDBF;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 50%);
+    top: 100%;
+    left: 20px;
+    display: none;
+} */
+
+.sub.position-absolute {
+    width: 100px;
+    height: 30px;
+}
+
+.subnav-vechungtoi {
+    list-style-type: none;
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px 17px 0 17px;
+    width: 310px;
+    height: 165px;
+    display: none;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    left: 30%;
+    top: 45px;
+}
+
+.subnav-vechungtoi:after {
+    top: -17%;
+    left: 48px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 18px;
+    margin-left: -18px;
+}
+
+.subnav-vechungtoi:before {
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    width: 36px;
+    height: 36px;
+    top: -3px;
+    left: 30px;
+    z-index: -1;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 75%);
+}
+/* .subnav-vechungtoi::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -0.5em;
+    bottom: -2em;
+    left: 50%;
+    box-sizing: border-box;
+    
+    border: 1em solid black;
+    border-color: transparent transparent #FFFFFF #FFFF;
+    
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    
+    box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.4);
+} */
+
+.menu li:hover .subnav-vechungtoi {
+    display: block;
+}
+
+.subnav-vechungtoi a {
+    height: 36px;
+    font-family: GilroyMedium, sans-serif;
+    font-size: 16px;
+    color: #404041;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+.subnav-vechungtoi li:hover {
+    background-color: #F1F1F2;
+    border-left: 3px solid #FF7E71;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.subnav-vechungtoi li p {
+    margin-bottom: 0;
+}
+
+/* SECTION */
+section.banner {
+    margin-top: 81px;
+    padding-top: 81px;
+    max-width: 1320px;
+    height: 315px;
+    background-image: url(../images/ve-chung-toi/banner-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+
+.gioithieu-content-more {
+    font-size: 20px;
+    color: #58595B;
+    width: 119px;
+    height: 22px;
+}
+
+.gioithieu-content-more p {
+    font-family: GilroySemiBold, sans-serif;
+}
+
+.banner-content {
+    flex-basis: 100%;
+    height: 264px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.gioithieu-content-more {
+    font-size: 20px;
+    color: #58595B;
+    width: 189px;
+    height: 22px;
+    text-align: center;
+}
+
+/* Tầm nhìn - sứ mệnh - giá trị cốt lõi */
+.bspm365.text-center {
+    margin-top: 50px;
+    margin-bottom: 33px;
+}
+
+.bspm365.text-center p {
+    font-family: GilroySemiBold, sans-serif;
+}
+
+.vision_mission_core-values-block {
+    width: 32%;
+    border: 1px solid #BBBDBF;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 50%);
+    padding: 24px;
+}
+
+.vision_mission_core-values-title p {
+    font-family: GilroySemiBold, sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.vision_mission_core-values-content {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* khách hàng */
+.block-khachhang {
+    max-width: 1320px;
+    height: auto;
+    background-image: url(../images/ve-chung-toi/bando-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.tintuc-title {
+    font-family: GilroySemiBold, sans-serif;
+    margin-bottom: 60px;
+}
+
+.khachhang-content-block-up {
+    font-family: GilroySemiBold, sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 0;
+}
+
+.khachhang-up- {
+    color: #0058A4;
+}
+
+.khachhang-up-2 {
+    color: #F6921E;
+}
+
+.khachhang-up-3 {
+    color: #BE1E2D;
+}
+
+.khachhang-content-block-down {
+    font-size: 20px;
+    color: #58595B;
+}
+
+/* phản hồi */
+.phanhoi-container {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.phanhoi-img {
+    width: 5%;
+}
+
+.phanhoi-block {
+    width: 40%;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 50%);
+    padding: 24px;
+    background-color: #fff;
+}
+
+.phanhoi-header {
+    margin-bottom: 16px;
+}
+
+.phanhoi-avatar {
+    margin-right: 25px;
+}
+
+.phanhoi-fullname p {
+    font-family: GilroySemiBold, sans-serif;
+    font-size: 20px;
+}
+
+.phanhoi-subname p {
+    font-size: 14px;
+    margin-top: -5px;
+    color: #58595B;
+}
+
+.phanhoi-main p {
+    font-size: 20px;
+    line-height: 24px;
+    color: #58595B;
+}
+
+/* ĐỐI TÁC */
+.doitac-row {
+    margin: 8px 0;
+    width: 100%;
+}
+
+.doitac-logo img {
+    max-width: 100%;
+}
+
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 767px) {
+    
+}

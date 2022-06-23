@@ -1,0 +1,684 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Gilroy, sans-serif;
+}
+
+body {
+    padding: 0 !important;
+}
+
+@font-face {
+    font-family: GilroyBold;
+    src: url(../font/SVN-Gilroy\ Bold.otf);
+}
+
+@font-face {
+    font-family: GilroySemiBold;
+    src: url(../font/SVN-Gilroy\ SemiBold.otf);
+}
+
+@font-face {
+    font-family: GilroyMedium;
+    src: url(../font/SVN-Gilroy\ Medium.otf);
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(../font/SVN-Gilroy\ Regular.otf);
+}
+
+@font-face {
+    font-family: GilroyItalic;
+    src: url(./font/SVN-Gilroy\ Italic.otf);
+}
+
+@font-face {
+    font-family: GilroyHeavy;
+    src: url(./font/SVN-Gilroy\ Heavy.otf);
+}
+
+.block-container {
+    flex-direction: column;
+}
+
+/* css chung */
+.pdl-100 {
+    padding-left: 100px;
+}
+
+.pd-y-100 {
+    padding: 0 100px !important;
+}
+
+.bb-4 {
+    border-bottom: 4px solid #E4E5E6;
+}
+
+.mr-16 {
+    margin-right: 16px;
+}
+
+.fz-13 {
+    font-size: 13px;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block !important;
+}
+
+.active {
+    border-bottom: 2px solid #0c0f13;
+}
+
+/* HEADER */
+header {
+    height: 80px;
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #ffffff;
+    font-family: GilroyMedium, sans-serif;
+}
+
+
+.block-header-container {
+    height: 36px;
+}
+
+.header-logo {
+    height: 29px;
+    width: 100px;
+}
+
+.header-main {
+
+}
+
+.header-main-right {
+    width: 142px;
+    height: 32px;
+}
+
+ul.menu {
+    list-style: none;
+}
+
+ul.menu > li.header-option {
+    padding-left: 40px;
+}
+
+.header-option a:hover {
+    opacity: 0.7;
+}
+
+ul.menu > li > a {
+    text-decoration: none;
+    color: #404041;
+    font-family: GilroyMedium, sans-serif;
+}
+
+ul.menu > li > a > button {
+    border: 1px solid #FF7E71;
+    border-radius: 50px;
+    background-color: #fff;
+    width: 142px;
+}
+
+ul.menu > li > a > button > div {
+    font-family: GilroyMedium, sans-serif;
+}
+
+/* SECTION */
+section.banner {
+    margin-top: 81px;
+    padding-top: 81px;
+    max-width: 1320px;
+    height: 666px;
+    background-image: url(../images/trang-chu/banner-trangchu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+
+.container-banner {
+    width: 100%;
+}
+
+.banner-content {
+    flex-basis: 100%;
+}
+
+.banner-content-title {
+    font-family: GilroyBold, sans-serif;
+    font-size: 51px;
+    color: #ffffff;
+    margin-bottom: 34px;
+}
+
+.banner-content-title p {
+    line-height: 53px;
+    font-family: GilroyBold, sans-serif;
+}
+
+.banner-content-container {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 200px;
+    padding-right: 20px;
+}
+
+.banner-content-container p {
+    line-height: 24px;
+}
+
+.banner-img {
+    width: 100%;
+}
+
+.banner-img img {
+    max-width: 100%;
+}
+
+.button-khampha {
+    width: 206px;
+    height: 46px;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+.kham-pha {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.banner-list-item {
+    bottom: 0;
+}
+
+.banner-list-item > ul.menu {
+    width: 629px;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+/* Giới thiệu */
+
+.body-trangchu {
+}
+
+.container-gioithieu {
+    padding: 60px 0 0 0 !important;
+    /* margin-right: 0 !important;
+    margin-left: 0 !important; */
+}
+
+.gioithieu-content {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gioithieu-content-title {
+    font-size: 30px;
+    line-height: 36px;
+    color: #FF4940;
+}
+
+.gioithieu-content-title p {
+    font-family: GilroySemiBold, sans-serif;
+}
+
+.gioithieu-content-container {
+    font-size: 20px;
+    color: #58595B;
+    line-height: 24px;
+}
+
+.gioithieu-content-more {
+    font-size: 20px;
+    color: #58595B;
+    width: 119px;
+    height: 22px;
+}
+
+.gioithieu-right {
+    width: 100%;
+}
+
+.gioithieu-right-title {
+    height: 80px;
+    margin-top: 20px;
+}
+
+.gioithieu-right-title-left img {
+    height: 30px;
+    align-self: flex-start;
+}
+
+.gioithieu-img img {
+    max-width: 100%;
+}
+
+.gioithieu-right-title-center {
+    font-family: GilroySemiBold, sans-serif;
+    font-size: 24px;
+    color: #58595B;
+    line-height: 30px;
+    margin: 0 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.gioithieu-right-title-right img {
+    height: 30px;
+    align-self: flex-end;
+}
+
+/* Business Solutions Powered by Microsoft 365 */
+
+.bspm365 {
+    font-size: 30px;
+    line-height: 36px;
+    color: #FF4940;
+    margin-top: 38px;
+}
+
+.bspm365 p {
+    font-family: GilroySemiBold, sans-serif;
+}
+
+/* Business */
+
+#mySlide1 {
+    display: block;
+}
+
+#mySlide2 {
+    display: none;
+}
+
+#mySlide3 {
+    display: none;
+}
+
+#active1 {
+    display: block;
+}
+
+#active2 {
+    display: none;
+}
+
+#active3 {
+    display: none;
+}
+
+
+.mySlides {
+    margin-top: 8px;
+}
+
+.business-block {
+    padding: 0 100px;
+}
+
+.business-header {
+    font-size: 24px;
+    line-height: 29px;
+    color: #404041;
+    background-color: #ffffff;
+    padding: 0 100px;
+    margin-top: 27px;
+    width: 100%;
+}
+
+.business-active {
+    width: 100%;
+    height: 4px;
+    background-color: #E4E5E6;
+    display: none;
+}
+
+.business-left-icon img {
+    margin-left: -8px;
+}
+
+.option-enterprise,
+.option-dichvu,
+.option-standard {
+    width: 33.33%;
+    text-align: center;
+    height: 40px;
+    cursor: pointer;
+}
+
+.option-standard p {
+    font-family: GilroySemiBold, sans-serif;
+}
+
+.option-enterprise p {
+    font-family: GilroySemiBold, sans-serif;
+}
+
+.option-dichvu p {
+    font-family: GilroySemiBold, sans-serif;
+}
+
+.business {
+    font-family: GilroySemiBold, sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    color: #404041;
+    height: 480px;
+    background-color: #EFEFF0;
+    width: 100%;
+    margin-top: 8px;
+    padding-top: 75px;
+    margin-bottom: 77px;
+}
+
+.business-left-content {
+    font-family: GilroySemiBold, sans-serif;
+    color: #404041;
+    margin-top: 23px;
+}
+
+.business-left-content p {
+    color: #404041;
+    font-size: 20px;
+}
+
+.describe {
+}
+
+.business-right-describe {
+    height: 66px;
+    margin-bottom: 4px;
+    background-color: #FF4940;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 10px;
+}
+
+.business-right-content {
+    margin-left: 20px;
+}
+
+.business-right-content p {
+    font-family: GilroyMedium, sans-serif;
+    line-height: 24px;
+}
+
+
+/* describe */
+
+.describe {
+    height: 489px;
+    width: 100%;
+}
+
+.describe-left-block {
+    background-color: #FFF3E7;
+    border-radius: 0 244px 244px 0;
+    justify-content: flex-end;
+    padding-right: 21px;
+    width: 50% !important;
+}
+
+.describe-content {
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.describe-left-img {
+    box-shadow: 0px 0px 11px rgb(0 0 0 / 50%);
+    border-radius: 10px;
+    max-width: 49%;
+}
+
+.describe-left-img img {
+    max-width: 100%;
+}
+
+.describe-right-block {
+    padding-left: 21px;
+    width: 50% !important;
+}
+
+.describe-right-content {
+    max-width: 48%;
+    height: 359px;
+}
+
+.describe-right-title {
+    font-size: 24px;
+    line-height: 29px;
+    color: #404041;
+    margin-bottom: 8px;
+}
+
+.describe-right-title p {
+    font-family: GilroySemiBold, sans-serif;
+}
+
+.describe-right-container {
+    font-size: 20px;
+    line-height: 24px;
+    color: #58595B;
+}
+
+.button-describe {
+    width: 205px;
+    height: 46px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    color: #FF4940;
+}
+
+.describe-left-block-2 {
+    justify-content: flex-end;
+    padding-right: 21px;
+}
+
+.describe-right-block-2 {
+    background-color: #FFF3E7;
+    border-radius: 244px 0 0 244px;
+    justify-content: flex-start;
+    padding-right: 21px;
+    padding-left: 21px;
+}
+
+.describe-left-content-2 {
+    max-width: 49%;
+    height: 375px;
+}
+
+.describe-left-title-2 {
+    font-size: 24px;
+    line-height: 29px;
+    color: #404041;
+    margin-bottom: 17px;
+}
+
+.describe-left-title-2 p {
+    font-family: GilroySemiBold, sans-serif;
+}
+
+.describe-left-container-2 {
+    font-size: 20px;
+    line-height: 24px;
+    color: #58595B;
+}
+
+.button-describe-2 {
+    width: 205px;
+    height: 46px;
+    border-radius: 50px;
+    background-color: #FF4940;
+    border: none;
+    color: #FFFFFF;
+}
+
+.describe-right-img-2 {
+    box-shadow: 0px 0px 11px rgb(0 0 0 / 50%);
+    border-radius: 10px;
+    max-width: 49%;
+}
+
+.describe-right-img-2 img {
+    max-width: 100%;
+}
+
+.test-img {
+    width: 590px;
+    height: 500px;
+    background-image: url(../images/trang-chu/banner-trangchu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* TIN TỨC */
+
+.tintuc-title {
+    text-align: center;
+    color: #FF4940;
+    font-family: GilroyBold, sans-serif;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.tintuc-content-row {
+    margin-top: 25px;
+}
+
+.tintuc-content {
+    width: 32%;
+    border-radius: 7px;
+}
+
+.tintuc-content:hover {
+    cursor: pointer;
+}
+
+.tintuc-img {
+    display: flex;
+    justify-content: center;
+}
+
+.tintuc-img img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.tintuc-describe {
+    text-align: center;
+    color: #404041;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 25px;
+}
+
+.tintuc-describe p {
+    font-family: GilroyBold, sans-serif;
+}
+
+.tintuc-next {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tintuc-content:hover {
+    box-shadow: 0px 0px 11px rgb(0 0 0 / 50%);
+}
+
+/* FOOTER */
+
+.footer-header {
+    height: 160px;
+    background-color: #EFEFF0;
+    padding-top: 30px;
+    margin: 60px 0;
+}
+
+.footer-header-title {
+    color: #404041;
+    font-size: 30px;
+    text-align: center;
+}
+
+.footer-header-title p {
+    font-family: GilroySemiBold, sans-serif;
+}
+
+.button-contact {
+    width: 205px;
+    height: 46px;
+    border: none;
+    background-color: #FF4940;
+    color: white;
+    border-radius: 50px;
+}
+
+.button-contact p {
+    margin-bottom: 0;
+}
+
+.button-contact:hover {
+    opacity: 0.7;
+}
+
+.footer-content {
+    border-bottom: 1.5px solid #808082;
+}
+
+.footer-content-column-title p {
+    font-style: 20px;
+    color: #404041;
+    font-family: GilroyBold, sans-serif;
+}
+
+.vanphong-icon {
+    margin-right: 8px;
+}
+
+.icon-follow:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.footer-sps-2022 {
+    font-size: 13px;
+    color: #58595B;
+}
+
+
+
+
+
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 767px) {
+    
+}

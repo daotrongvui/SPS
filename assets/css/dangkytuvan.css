@@ -1,0 +1,130 @@
+/* SECTION */
+section.banner {
+    margin-top: 81px;
+    padding-top: 81px;
+    max-width: 1320px;
+    height: 352px;
+    background-image: url(../images/dang-ky-tu-van/banner-dangkytuvan.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+
+.header-option a button {
+    background-color: #dee9fa !important;
+}
+
+.container-banner {
+    text-align: center;
+    height: 100%;
+    font-size: 30px;
+    line-height: 35px;
+    color: #fff;
+    margin-top: 30px;
+}
+
+.container-banner p {
+    font-family: GilroySemiBold;
+}
+
+/* Đăng ký ngay */
+.diadiem {
+    margin-top: 45px;
+}
+
+.dangky-container {
+    width: 100%;
+}
+
+.diadiem p {
+    font-family: GilroySemiBold, sans-serif;
+    color: #FF4940;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.so-nha-dangky {
+    color: #58595B;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.phone-dangky {
+    margin-bottom: 15px;
+}
+
+.phone-dangky-icon {
+    margin-right: 12px;
+    
+}
+
+.content-dangky {
+    flex-basis: 100%;
+}
+
+input.hoten {
+    height: 52px;
+    border: 1px solid #929497;
+    border-radius: 5px;
+    padding: 18px 0 18px 26px;
+    width: 49%;
+}
+
+input.congty {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #929497;
+    border-radius: 5px;
+    padding-left: 26px;
+    margin: 21px 0;
+}
+
+textarea.noidung {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #929497;
+    border-radius: 5px;
+    padding: 18px 5px 18px 26px;
+}
+
+/* button send */
+.button-send {
+    margin-top: 44px;
+    margin-bottom: 54px;
+}
+
+.gui-ngay {
+    height: 46px;
+    width: 205px;
+    border-radius: 50px;
+    border: none;
+    background-color: #FF4940;
+    font-size: 18px;
+    color: #fff;
+}
+
+.gui-ngay:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* MAPS */
+
+.maps-img iframe {
+    width: 100%;
+}
+
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 767px) {
+    
+}

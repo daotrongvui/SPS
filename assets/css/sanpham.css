@@ -1,0 +1,340 @@
+#sanpham {
+    display: block;
+}
+
+#standard {
+    display: none;
+}
+
+#enterprise {
+    display: none;
+}
+
+#vedichvu {
+    display: none;
+}
+
+.subnav-sanpham {
+    list-style-type: none;
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px 17px 0 17px;
+    width: 200px;
+    height: 130px;
+    display: none;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    left: 30%;
+    top: 45px;
+}
+
+.subnav-sanpham:after {
+    top: -22%;
+    left: 48px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 18px;
+    margin-left: -18px;
+}
+
+.subnav-sanpham:before {
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    width: 36px;
+    height: 36px;
+    top: -3px;
+    left: 30px;
+    z-index: -1;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 75%);
+}
+
+.menu li:hover .subnav-sanpham {
+    display: block;
+}
+
+.subnav-sanpham li {
+    height: 36px;
+    font-family: GilroyMedium, sans-serif;
+    font-size: 16px;
+    color: #404041;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+.subnav-sanpham li:hover {
+    background-color: #F1F1F2;
+    border-left: 3px solid #FF7E71;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.subnav-sanpham li p {
+    margin-bottom: 0;
+}
+
+/* SECTION */
+section.banner {
+    margin-top: 81px;
+    padding-top: 81px;
+    max-width: 1320px;
+    height: 666px;
+    background-image: url(../images/trang-chu/banner-trangchu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+
+.banner-content {
+    flex-basis: 100%;
+    height: 465px;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-img {
+    height: 465px;
+}
+
+.banner-content-container {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 80px;
+    padding-right: 20px;
+    margin-top: -75px;
+}
+
+.banner-img img {
+    align-self: flex-end;
+}
+
+/* THÂN TRANG SẢN PHẨM */
+
+/* quanlycongviec */
+.quanlycongviec {
+    margin-top: 45px;
+}
+
+.quanlycongviec-left {
+    width: 50%;
+}
+
+.quanlycongviec-title {
+    margin-bottom: 25px;
+}
+
+.quanlycongviec-title img {
+    margin-right: 20px;
+}
+
+.quanlycongviec-title p {
+    font-family: GilroySemiBold, sans-serif;
+    font-size: 30px;
+    color: #404041;
+    line-height: 30px;
+}
+
+.quanlycongviec-content p {
+    font-size: 20px;
+    line-height: 27px;
+    color: #58595B;
+}
+
+.quanlycongviec-right {
+    width: 50%;
+
+}
+
+.quanlycongviec-right img {
+    max-width: 90%;
+}
+
+/* progress */
+.progress-container {
+    background-color: #F1F1F2;
+    height: 550px;
+    margin-bottom: 50px;
+}
+
+.progress-block {
+    background-color: #ffffff;
+    height: 400px;
+    width: 31%;
+    border: 1px solid #BBBDBF;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px rgb(0 0 0 / 30%);
+}
+
+.progress-img {
+    background-color: #E9F6FD;
+    height: 184px;
+    border-radius: 7px 7px 0 0;
+}
+
+.progress-title p {
+    text-align: center;
+    color: #231F20;
+    font-family: GilroySemiBold, sans-serif;
+    font-size: 24px;
+    line-height: 27px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    height: 54px;
+}
+
+.progress-content {
+    padding: 0 18px 35px 18px;
+}
+
+.progress-content p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #58595B;
+}
+
+.describe-right-title {
+    margin-bottom: 21px;
+}
+
+.describe-left-container-2 {
+    margin-top: 21px;
+}
+
+/* Săn phẩm liên quan */
+.sanphamlienquan-container {
+    background-color: #F1F1F2;
+    margin-top: 50px;
+    padding: 40px 0 0 0;
+    height: 455px;
+    margin-bottom: 60px;
+}
+
+.sanphamlienquan-title {
+    font-family: GilroyBold, sans-serif;
+    font-size: 30px;
+    color: #FF4940;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sanphamlienquan-block {
+    margin-bottom: 60px;
+}
+
+.sanphamlienquan-col {
+    width: 31%;
+    padding: 21px 26px 17px 26px;
+    background-color: #ffffff;
+}
+
+.sanphamlienquan-icon {
+    text-align: center;
+}
+
+.sanphamlienquan-title p {
+    font-family: GilroyBold, sans-serif;
+    font-size: 20px;
+}
+
+.sanphamlienquan-content p {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+
+
+/* THÂN TRANG SPS STANDARD */
+
+.standard-title {
+    text-align: center;
+    font-size: 30px;
+    font-family: GilroySemiBold, sans-serif;
+    color: #FF4940;
+    margin-top: 40px;
+}
+
+.business {
+    background-color: #ffffff;
+    padding-top: 54px;
+    height: auto;
+}
+
+.business-right-describe {
+    background-color: #F1F1F2;
+    color: #58595B;
+}
+
+.sanphamlienquan-container-standard {
+    background-color: #ffffff;
+    margin-bottom: 60px;
+}
+
+.sanphamlienquan-col-standard {
+    width: 31%;
+    padding: 21px 26px 17px 26px;
+    background-color: #E9F6FD;
+}
+
+/* dangkytuvan */
+.dangkytuvan {
+    background-color: #F1F1F2;
+    padding: 40px 0;
+}
+
+.dangkytuvan-title {
+    font-family: GilroyBold, sans-serif;
+    font-size: 30px;
+    color: #FF4940;
+}
+
+.dangky-standard input,
+.dangky-standard select {
+    background-color: transparent;
+}
+
+.dangky-standard input:hover,
+.dangky-standard select:hover {
+    background-color: transparent;
+}
+
+.dangky-standard label {
+    font-family: Gilroy, sans-serif;
+    font-size: 20px;
+    color: #404041;
+}
+.dangky-standard > select {
+    font-family: GilroyItalic, sans-serif;
+    font-size: 14px;
+}
+
+/* Hướng dẫn sử dụng */
+.tintuc-title {
+    margin: 45px 0;
+}
+
+/* THÂN TRANG ENTERPRISE */
+
+
+
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 767px) {
+    
+}
