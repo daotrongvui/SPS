@@ -1,5 +1,5 @@
 #sanpham {
-    display: none;
+    display: block;
 }
 
 #standard {
@@ -11,7 +11,7 @@
 }
 
 #vedichvu {
-    display: block;
+    display: none;
 }
 
 
