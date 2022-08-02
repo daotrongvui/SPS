@@ -1,28 +1,4 @@
-/* * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: GilroyBold, sans-serif;
-}
 
-body {
-    padding: 0 !important;
-}
-
-@font-face {
-    font-family: GilroyBold;
-    src: url(../font/SVN-Gilroy\ Bold.otf);
-}
-
-@font-face {
-    font-family: GilroySemiBold;
-    src: url(../font/SVN-Gilroy\ SemiBold.otf);
-}
-
-@font-face {
-    font-family: GilroyMedium;
-    src: url(../font/SVN-Gilroy\ Medium.otf);
-} */
 
 .triangle-up {
 	width: 0;
@@ -34,19 +10,6 @@ body {
     border-radius: 7px;
 }
 
-/* .subnav-vechungtoi {
-    list-style-type: none;
-    padding: 10px 17px 0 17px;
-    width: 310px;
-    height: 165px;
-    background-color: #FFFFFF;
-    border: 1px solid #BBBDBF;
-    border-radius: 7px;
-    box-shadow: 0px 0px 5px rgb(0 0 0 / 50%);
-    top: 100%;
-    left: 20px;
-    display: none;
-} */
 
 .sub.position-absolute {
     width: 100px;
@@ -93,24 +56,7 @@ body {
     z-index: -1;
     box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 75%);
 }
-/* .subnav-vechungtoi::before{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    margin-left: -0.5em;
-    bottom: -2em;
-    left: 50%;
-    box-sizing: border-box;
-    
-    border: 1em solid black;
-    border-color: transparent transparent #FFFFFF #FFFF;
-    
-    transform-origin: 0 0;
-    transform: rotate(-45deg);
-    
-    box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.4);
-} */
+
 
 .menu li:hover .subnav-vechungtoi {
     display: block;
@@ -140,15 +86,33 @@ body {
 
 /* SECTION */
 section.banner {
-    margin-top: 81px;
-    padding-top: 81px;
+    padding: 0 100px;
     max-width: 1320px;
-    height: 315px;
+    height: 350px;
     background-image: url(../images/ve-chung-toi/banner-img.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     flex-direction: column;
+    padding-right: 100px;
+    padding-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-banner {
+    width: 100%;
+    display: flex;
+}
+
+#gioithieuchung {
+    padding: 0 100px;
+}
+
+.gioithieu-block {
+    display: flex;
+    justify-content: space-between;
 }
 
 .gioithieu-content-more {
@@ -178,6 +142,21 @@ section.banner {
     text-align: center;
 }
 
+.gioithieu-img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.gioithieu-right-title {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+
 /* Tầm nhìn - sứ mệnh - giá trị cốt lõi */
 .bspm365.text-center {
     margin-top: 50px;
@@ -186,6 +165,18 @@ section.banner {
 
 .bspm365.text-center p {
     font-family: GilroySemiBold, sans-serif;
+}
+
+.vision_mission_core-values_tablet {
+    display: none;
+    justify-content: center;
+}
+
+.vision_mission_core-values {
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .vision_mission_core-values-block {
@@ -205,10 +196,12 @@ section.banner {
 .vision_mission_core-values-content {
     font-size: 20px;
     line-height: 24px;
+    text-align: justify;
 }
 
 /* khách hàng */
 .block-khachhang {
+    padding: 0 100px;
     max-width: 1320px;
     height: auto;
     background-image: url(../images/ve-chung-toi/bando-img.png);
@@ -220,6 +213,11 @@ section.banner {
 .tintuc-title {
     font-family: GilroySemiBold, sans-serif;
     margin-bottom: 60px;
+}
+
+.khachhang-content {
+    display: flex;
+    justify-content: space-between;
 }
 
 .khachhang-content-block-up {
@@ -250,6 +248,10 @@ section.banner {
 .phanhoi-container {
     width: 100%;
     margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
 }
 
 .phanhoi-img {
@@ -290,25 +292,291 @@ section.banner {
 }
 
 /* ĐỐI TÁC */
+
+.doitac-container {
+    padding: 0 100px;
+}
+
 .doitac-row {
     margin: 8px 0;
     width: 100%;
 }
 
 .doitac-logo img {
-    max-width: 100%;
+    max-width: 98%;
+}
+
+.footer {
+    padding: 0 100px;
 }
 
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023.9px) {
+    section.banner {
+        padding: 0 50px !important;
+        height: 250px;
+    }
+
+    #gioithieuchung {
+        padding: 0 50px;
+    }
+
+    .gioithieu-content {
+        margin-right: 0;
+    }
+
+    .gioithieu-content-container {
+        overflow: inherit;
+        max-height: none;
+    }
+
+    .gioithieu-content-container p {
+        font-size: 16px;
+    }
+
+    .container-gioithieu {
+        padding-top: 35px;
+    }
+
+    .gioithieu-img img {
+        height: 414px;
+    }
+
+    .gioithieu-right {
+        padding-top: 55px;
+    }
+
+    .bspm365 {
+        max-width: none;
+    }
+
+    .bspm365.text-center {
+        margin-top: 100px;
+    }
+
+    .vision_mission_core-values {
+        padding: 0 50px;
+        flex-wrap: wrap;
+    }
+
+    .vision_mission_core-values-block {
+        width: 47%;
+    }
+
+    .vision_mission_core-values_tablet {
+        display: flex;
+        margin-top: 35px;
+    }
+
+    .core-values {
+        display: none;
+    }
+
+    .core-values-tablet {
+        width: 43%;
+    }
+
+    .block-khachhang {
+        padding: 0 50px;
+    }
+
+    .vision_mission_core-values-content p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .vision_mission_core-values-title p {
+        font-size: 20px;
+    }
+
+    .vision_mission_core-values-img img {
+        height: 38px;
+    }
+
+    .tintuc-title {
+        font-size: 24px;
+    }
+
+    .khachhang-content {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .phanhoi-container {
+        padding: 0 50px;
+    }
+
+    .phanhoi-block {
+        width: 75%;
+    }
+
+    .phanhoi-block_tablet {
+        display: none;
+    }
+
+    .doitac-container {
+        padding: 0 50px;
+    }
     
+    .footer-header-title p {
+        font-size: 24px;
+    }
+
+    .button-contact {
+        height: 34px;
+        width: 150px;
+    }
+    
+    .button-contact p {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 0 50px;
+    }
+
+    .footer-content-column-title p {
+        margin-bottom: 5px;
+    }
 }
 
 
 
 
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
+
+    .block-container {
+        width: 100vw;
+    }
+
+    section.banner {
+        display: flex;
+        padding: 0 35px;
+        margin-top: 61px;
+        background-image: url(../images/ve-chung-toi/vechungtoi-mobile-bgr.png);
+    }
+
+    .container-banner {
+        display: none;
+    }
+
+    #gioithieuchung {
+        padding: 35px;
+    }
+
+
+
+
+
+
+    .vision_mission_core-values_tablet {
+        display: none;
+    }
+
+    .container-gioithieu {
+        padding-top: 0;
+    }
+
+    .gioithieu-right {
+        /* margin-top: 100px; */
+    }
+
+    .gioithieu-right-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .gioithieu-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bspm365.text-center {
+        margin-top: 0;
+    }
+
+    .bspm365.text-center p {
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+    .vision_mission_core-values {
+        padding: 0 35px;
+        flex-direction: column;
+    }
+
+    .vision_mission_core-values-block {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .khachhang-content {
+        display: block;
+    }
+
+    .block-khachhang {
+        padding: 0 35px;
+    }
+
+    .tintuc-title {
+        margin-top: 35px;
+        margin-bottom: 40px;
+    }
+
+    .phanhoi-block {
+        width: 80%;
+    }
+
+    .phanhoi-block_tablet {
+        display: none;
+    }
+
+    .phanhoi-container {
+        padding: 0 5px;
+    }
+
+    .bspm365.text-center {
+        margin-top: 30px;
+    }
+
+    .doitac-container {
+        padding: 0 35px;
+    }
+
+    .footer {
+        padding: 0 35px;
+    }
+
+    .footer-header-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-header-title p {
+        width: 210px;
+        line-height: 30px;
+    }
+
+    .footer-header {
+        margin-bottom: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 }

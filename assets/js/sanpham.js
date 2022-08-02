@@ -4,6 +4,7 @@ function sanpham () {
     document.getElementById("standard").style.display = 'none';
     document.getElementById("enterprise").style.display = 'none';
     document.getElementById("vedichvu").style.display = 'none';
+    document.getElementById("modal_menu").style.display = 'none';
 };
 
 function standard () {
@@ -11,6 +12,7 @@ function standard () {
   document.getElementById("sanpham").style.display = 'none';
   document.getElementById("enterprise").style.display = 'none';
   document.getElementById("vedichvu").style.display = 'none';
+  document.getElementById("modal_menu").style.display = 'none';
 };
 
 function enterprise () {
@@ -18,6 +20,7 @@ function enterprise () {
   document.getElementById("sanpham").style.display = 'none';
   document.getElementById("standard").style.display = 'none';
   document.getElementById("vedichvu").style.display = 'none';
+  document.getElementById("modal_menu").style.display = 'none';
 };
 
 function vedichvu () {
@@ -25,4 +28,5 @@ function vedichvu () {
   document.getElementById("sanpham").style.display = 'none';
   document.getElementById("enterprise").style.display = 'none';
   document.getElementById("standard").style.display = 'none';
+  document.getElementById("modal_menu").style.display = 'none';
 };

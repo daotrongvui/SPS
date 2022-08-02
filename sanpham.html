@@ -4,20 +4,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPS</title>
+    <link rel="icon" href="./assets/images/trang-chu/logoSPS.png">
+    <title>Công ty cổ phần công nghệ SPS VIỆT NAM</title>
     <link rel="stylesheet" href="./assets/css/trangchu.css">
     <link rel="stylesheet" href="./assets/css/vechungtoi.css">
     <link rel="stylesheet" href="./assets/css/sanpham.css">
     <link rel="stylesheet" href="./assets/font">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./assets/js/trangchu.js"></script>
     <script src="./assets/js/sanpham.js"></script>
 </head>
-<body class="container-xl d-flex justify-content-center">
+<body class="container-xl">
+    <!-- MODAL MENU -->
+    <div id="modal_menu" class="modal_menu">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <div class="modal__inner">
+                <div class="submenu_header">
+                    <div class="icon_close_menu">
+                        <img src="./assets/images/close_submenu.png" alt="" onclick="menuHide()">
+                    </div>
+    
+                    <div id="header-main-submenu" class="header-main-submenu">
+                        <div class="">
+                            <ul class="menu_sub">
+                                <li class="header-sub-option"><a href="index.html">Trang chủ</a></li>
+                                <li class="header-sub-option"><a href="vechungtoi.html">Về chúng tôi</a></li>
+                                <li class="header-sub-option-response">
+                                    <div class="header-sub-option-top">
+                                        <a href="sanpham.html">Sản phẩm</a>
+                                        <img src="./assets/images/sub_menu_more.png" alt="" onclick="showSupSanPham()">
+                                    </div>
+                                    <div id="header-sub-option-bottom" class="header-sub-option-bottom">
+                                        <ul class="subnav-sanpham-response">
+                                            <li onclick="standard()"><a href="#standard">SPS Standard</a></li>
+                                            <li onclick="enterprise()"><a href="#enterprise">SPS Enterprise</a></li>
+                                            <li onclick="vedichvu()"><a href="#vedichvu">Về dịch vụ</a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                </li>
+                                <li class="header-sub-option"><a href="tintuc.html">Tin tức</a></li>
+                                <li class="header-sub-option header-sub-option-dangkytuvan">
+                                    <a href="dangkytuvan.html">
+                                        <button>
+                                            <div>Đăng ký tư vấn</div>
+                                        </button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submenu_lienhe">
+                    <div class="footer-content-column-describe">
+                        <ul class="list-unstyled fz-13">
+                            <li class="d-flex align-items-center">
+                                <div class="vanphong-icon">
+                                    <img src="./assets/images/trang-chu/vp-mail.png" alt="">
+                                </div>
+                                <div class="vanphong-contact">
+                                    info@sps.com
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="vanphong-icon">
+                                    <img src="./assets/images/trang-chu/vp-phone.png" alt="">
+                                </div>
+                                <div class="vanphong-contact">
+                                    +84 666 6666
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="vanphong-icon">
+                                    <img src="./assets/images/trang-chu/vp-addr.png" alt="">
+                                </div>
+                                <div class="vanphong-contact">
+                                    Quan Nhân, Thanh Xuân, Hà Nội
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-column-describe footer-content-column-describe_icon">
+                        <ul class="d-flex justify-content-between list-unstyled fz-13">
+                            <li class="icon-follow">
+                                <img src="./assets/images/trang-chu/fl-face.png" alt="">
+                            </li>
+                            <li class="icon-follow">
+                                <img src="./assets/images/trang-chu/fl-twitter.png" alt="">
+                            </li>
+                            <li class="icon-follow">
+                                <img src="./assets/images/trang-chu/fl-insta.png" alt="">
+                            </li>
+                            <li class="icon-follow">
+                                <img src="./assets/images/trang-chu/fl-youtube.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
     <!-- HEADER -->
-    <header class="d-flex align-items-center justify-content-center">
-        <div class="container-xl container-header d-flex align-items-center justify-content-center pd-y-100 ">
-            <div class="block-header-container d-flex justify-content-between align-items-center w-100">
+    <header id="main_header" class="d-flex align-items-center justify-content-center">
+        <div class="container-xl container-header d-flex align-items-center justify-content-center">
+            <div id="submenu-icon" class="submenu-icon" onclick="menuShow()">
+                <img src="./assets/images/sub_menu.png" alt="">
+            </div>
+            <div class="block-header-container w-100">
                 <div class="header-logo d-flex justify-content-between align-items-center">
                     <div class="header-logo-img">
                         <img src="./assets/images/trang-chu/logoSPS.png" alt="" srcset="">
@@ -26,18 +131,17 @@
                         <img src="./assets/images/trang-chu/Name-SPS.png" alt="">
                     </div>
                 </div>
-                <div class="header-main d-flex justify-content-between align-items-center">
+                <div class="header-main justify-content-between align-items-center">
                     <div class="d-flex justify-content-between align-items-center">
                         <ul class="menu d-flex justify-content-between align-items-center mb-0">
                             <li class="header-option"><a href="index.html">Trang chủ</a></li>
                             <li class="header-option"><a href="vechungtoi.html">Về chúng tôi</a></li>
                             <li class="header-option position-relative">
                                 <a href="sanpham.html" class="active" onclick="sanpham()">Sản phẩm</a>
-                                <!-- <div class="triangle-up position-absolute"></div> -->
                                 <ul class="subnav-sanpham position-absolute">
-                                    <li onclick="standard()">SPS Standard</a></li>
-                                    <li onclick="enterprise()">SPS Enterprise</a></li>
-                                    <li onclick="vedichvu()">Về chúng tôi</a></li>
+                                    <li onclick="standard()"><a href="#standard">SPS Standard</a></li>
+                                    <li onclick="enterprise()"><a href="#enterprise">SPS Enterprise</a></li>
+                                    <li onclick="vedichvu()"><a href="#vedichvu">Về dịch vụ</a></li>
                                 </ul>
                                 <div class="sub position-absolute"></div>
                             </li>
@@ -57,10 +161,7 @@
     </header>
     <div class="bg-white block-container d-flex">
 
-        
-
-
-        <section class="banner d-flex justify-content-center pd-y-100 position-relative">
+        <section id="banner" class="banner d-flex align-items-center justify-content-center position-relative">
             <div class="container-banner w-100">
                 <div class="banner-block justify-content-between d-flex">
                     <div class="banner-content">
@@ -76,8 +177,13 @@
                             </button>
                         </div>
                     </div>
-                    <div class="banner-img d-flex">
+                    <div class="banner-img">
                         <img src="./assets/images/san-pham/banner-img-right.png" alt="" srcset="">
+                    </div>
+                    <div class="banner-content-button banner-content-button-2">
+                        <button class="button-khampha">
+                            <div class="kham-pha">Liên hệ tư vấn</div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -87,7 +193,7 @@
         <div id="sanpham" class="body-trangchu body-sanpham">
 
             <!-- Giới thiệu -->
-            <div class="pd-y-100">
+            <div class="quanlycongviec-block">
                 <div class="quanlycongviec d-flex">
                     <div class="quanlycongviec-left">
                         <div class="quanlycongviec-title d-flex align-items-center">
@@ -113,7 +219,7 @@
 
 
             <!-- progress -->
-            <div class="progress-container pd-y-100 d-flex justify-content-between align-items-center">
+            <div class="progress-container">
                 <div class="progress-block">
                     <div class="progress-img"></div>
                     <div class="progress-title">
@@ -161,16 +267,17 @@
             </div>
             <!-- describe -->
             <div class="">
-                    <!-- describe 1 -->
-                <div class="d-flex bg-white justify-content-center position-relative">
-                    <div class="describe d-flex">
-                        <div class="describe-left-block w-50 d-flex align-items-center"></div>
-                        <div class="describe-right-block w-50 d-flex align-items-center"></div>
-                    </div>
-                    <div class=" describe-content w-100 d-flex justify-content-between align-items-center position-absolute pd-y-100">
-                        <div class="describe-left-img">
-                                <img src="./assets/images/trang-chu/describe-img1.png" alt="">
+                <!-- describe 1 -->
+                <div class="describe-block bg-white">
+                    <div class="describe">
+                        <div class="describe-left-background"></div>
+                        <div class="describe-left-block position-absolute">
+                            <div class="describe-left-img">
+                                    <img src="./assets/images/trang-chu/describe-img1.png" alt="">
+                            </div>
                         </div>
+                    </div>
+                    <div class="describe-content w-100">
                         <div class="describe-right-content position-relative">
                             <div class="describe-right-title">
                                 <p class="mb-0">Quản lý công việc và dự án</p>
@@ -178,30 +285,47 @@
                             <div class="describe-right-container">
                                 <p class="mb-0">- Khả năng tùy biến, tích hợp và mở rộng không giới hạn 
                                     <br>- Giải pháp linh hoạt cho nhiều đối tượng và mô hình công ty một cách đa chiều
-                                    <br>- Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.                            </p>
+                                    <br>- Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.</p>
+                            </div>
+                            <div class="describe-right-button bottom-0">
+                                <button class="button-describe">
+                                    <div class="button-describe-block d-flex justify-content-center align-items-center">
+                                        <div class="describe-more mr-16">Xem thêm</div>
+                                        <img src="./assets/images/trang-chu/describe-icon-next.png" alt="">
+                                    </div>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- describe 2 -->
-                <div class="d-flex bg-white justify-content-center position-relative">
-                    <div class="describe d-flex justify-content-center">
-                        <div class="describe-left-block-2 w-50 d-flex align-items-center"></div>
-                        <div class="describe-right-block-2 w-50 d-flex align-items-center"></div>
-                    </div>
-                    <div class=" describe-content d-flex justify-content-between align-items-center position-absolute pd-y-100">
-                        <div class="describe-left-content-2 position-relative">
-                            <div class="describe-left-title-2 mb-0">
+                <div class="describe-block describe-block-2 bg-white">
+                    <div class="describe-left-content-2 w-100">
+                        <div class="describe-right-content position-relative">
+                            <div class="describe-right-title">
                                 <p class="mb-0">Quản lý dự án tờ trình - phê duyệt</p>
                             </div>
-                            <div class="describe-left-container-2">
+                            <div class="describe-right-container">
                                 <p class="mb-0">- Khả năng tùy biến, tích hợp và mở rộng không giới hạn
                                     <br>- Giải pháp linh hoạt cho nhiều đối tượng và mô hình công ty một cách đa chiều
                                     <br>- Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.</p>
                             </div>
+                            <div class="describe-left-button bottom-0">
+                                <button class="button-describe-2">
+                                    <div class="button-describe-block-2 d-flex justify-content-center align-items-center">
+                                        <div class="describe-more-2 mr-16">Xem thêm</div>
+                                        <img src="./assets/images/trang-chu/describe-icon-next-2.png" alt="">
+                                    </div>
+                                </button>
+                            </div>
                         </div>
-                        <div class="describe-right-img-2">
-                            <img src="./assets/images/trang-chu/describe-img2.png" alt="">
+                    </div>
+                    <div class="describe-2">
+                        <div class="describe-right-background"></div>
+                        <div class="describe-right-block position-absolute">
+                            <div class="describe-right-img">
+                                <img src="./assets/images/trang-chu/describe-img2.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -212,7 +336,7 @@
                 <div class="sanphamlienquan-title">
                     Sản phẩm liên quan
                 </div>
-                <div class="sanphamlienquan-block d-flex justify-content-between pd-y-100">
+                <div class="sanphamlienquan-block d-flex justify-content-between">
                     <div class="sanphamlienquan-col">
                         <div class="sanphamlienquan-icon">
                             <img src="./assets/images/san-pham/quanlycongviec-icon.png" alt="">
@@ -254,7 +378,7 @@
                         <div class="sanphamlienquan-title">
                             <p>
                                 Quản lý quy trình và<br>
-                                thiết lập work follow
+                                thiết lập workflow
                             </p>
                         </div>
                         <div class="sanphamlienquan-content">
@@ -277,7 +401,7 @@
                 <div class="business">
                     <div class="container-business">
                         <div class="business-block d-flex justify-content-between">
-                            <div class="business-left w-50">
+                            <div class="business-left">
                                 <div class="business-left-icon">
                                     <img src="./assets/images/trang-chu/business-icon.png" alt="">
                                 </div>
@@ -285,7 +409,7 @@
                                     Quản trị doanh nghiệp vừa và nhỏ<br>
                                     (10-200 người)</div>
                             </div>
-                            <div class="business-right w-50">
+                            <div class="business-right">
                                 <div class="business-right-describe d-flex align-items-center">
                                     <div class="business-right-icon">
                                         <img src="./assets/images/san-pham/standard/quanlycongviec.png" alt="">
@@ -318,7 +442,7 @@
 
             <!-- Sản phẩm liên quan -->
             <div class="sanphamlienquan-container-standard">
-                <div class="sanphamlienquan-block d-flex justify-content-between pd-y-100">
+                <div class="sanphamlienquan-block d-flex justify-content-between">
                     <div class="sanphamlienquan-col-standard">
                         <div class="sanphamlienquan-icon">
                             <img src="./assets/images/san-pham/quanlycongviec-icon.png" alt="">
@@ -360,7 +484,7 @@
                         <div class="sanphamlienquan-title">
                             <p>
                                 Quản lý quy trình và<br>
-                                thiết lập work follow
+                                thiết lập workflow
                             </p>
                         </div>
                         <div class="sanphamlienquan-content">
@@ -377,15 +501,16 @@
             <!-- describe -->
             <div class="">
                 <!-- describe 1 -->
-                <div class="d-flex bg-white justify-content-center position-relative">
-                    <div class="describe d-flex">
-                        <div class="describe-left-block w-50 d-flex align-items-center"></div>
-                        <div class="describe-right-block w-50 d-flex align-items-center"></div>
-                    </div>
-                    <div class=" describe-content w-100 d-flex justify-content-between align-items-center position-absolute pd-y-100">
-                        <div class="describe-left-img">
-                                <img src="./assets/images/trang-chu/describe-img1.png" alt="">
+                <div class="describe-block bg-white">
+                    <div class="describe">
+                        <div class="describe-left-background"></div>
+                        <div class="describe-left-block position-absolute">
+                            <div class="describe-left-img">
+                                    <img src="./assets/images/trang-chu/describe-img1.png" alt="">
+                            </div>
                         </div>
+                    </div>
+                    <div class="describe-content w-100">
                         <div class="describe-right-content position-relative">
                             <div class="describe-right-title">
                                 <p class="mb-0">Quản lý công việc và dự án</p>
@@ -395,7 +520,7 @@
                                     - Giải pháp linh hoạt cho nhiều đối tượng và mô hình công ty một cách đa chiều<br>
                                     - Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.</p>
                             </div>
-                            <div class="describe-right-button position-absolute bottom-0 end-0">
+                            <div class="describe-right-button bottom-0">
                                 <button class="button-describe">
                                     <div class="button-describe-block d-flex justify-content-center align-items-center">
                                         <div class="describe-more mr-16">Xem thêm</div>
@@ -407,22 +532,18 @@
                     </div>
                 </div>
                 <!-- describe 2 -->
-                <div class="d-flex bg-white justify-content-center position-relative">
-                    <div class="describe d-flex justify-content-center">
-                        <div class="describe-left-block-2 w-50 d-flex align-items-center"></div>
-                        <div class="describe-right-block-2 w-50 d-flex align-items-center"></div>
-                    </div>
-                    <div class=" describe-content d-flex justify-content-between align-items-center position-absolute pd-y-100">
-                        <div class="describe-left-content-2 position-relative">
-                            <div class="describe-left-title-2 mb-0">
+                <div class="describe-block describe-block-2 bg-white">
+                    <div class="describe-left-content-2 w-100">
+                        <div class="describe-right-content position-relative">
+                            <div class="describe-right-title">
                                 <p class="mb-0">Quản lý dự án tờ trình - phê duyệt</p>
                             </div>
-                            <div class="describe-left-container-2">
+                            <div class="describe-right-container">
                                 <p class="mb-0">- Khả năng tùy biến, tích hợp và mở rộng không giới hạn
                                     <br>- Giải pháp linh hoạt cho nhiều đối tượng và mô hình công ty một cách đa chiều
                                     <br>- Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.</p>
                             </div>
-                            <div class="describe-left-button position-absolute bottom-0 start-0">
+                            <div class="describe-left-button bottom-0">
                                 <button class="button-describe-2">
                                     <div class="button-describe-block-2 d-flex justify-content-center align-items-center">
                                         <div class="describe-more-2 mr-16">Xem thêm</div>
@@ -431,31 +552,37 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="describe-right-img-2">
-                            <img src="./assets/images/trang-chu/describe-img2.png" alt="">
+                    </div>
+                    <div class="describe-2">
+                        <div class="describe-right-background"></div>
+                        <div class="describe-right-block position-absolute">
+                            <div class="describe-right-img">
+                                <img src="./assets/images/trang-chu/describe-img2.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- describe 3 -->
-                <div class="d-flex bg-white justify-content-center position-relative">
-                    <div class="describe d-flex">
-                        <div class="describe-left-block w-50 d-flex align-items-center"></div>
-                        <div class="describe-right-block w-50 d-flex align-items-center"></div>
-                    </div>
-                    <div class=" describe-content d-flex justify-content-between align-items-center position-absolute pd-y-100">
-                        <div class="describe-left-img">
-                            <img src="./assets/images/trang-chu/describe-img3.png" alt="">
+                <div class="describe-block bg-white">
+                    <div class="describe">
+                        <div class="describe-left-background"></div>
+                        <div class="describe-left-block position-absolute">
+                            <div class="describe-left-img">
+                                    <img src="./assets/images/trang-chu/describe-img1.png" alt="">
+                            </div>
                         </div>
+                    </div>
+                    <div class="describe-content w-100">
                         <div class="describe-right-content position-relative">
                             <div class="describe-right-title">
-                                <p class="mb-0">Quản lý quy trình và thiết lập work follow</p>
+                                <p class="mb-0">Quản lý quy trình và thiết lập workflow</p>
                             </div>
                             <div class="describe-right-container">
                                 <p class="mb-0">- Khả năng tùy biến, tích hợp và mở rộng không giới hạn
                                     <br>- Giải pháp linh hoạt cho nhiều đối tượng và mô hình công ty một cách đa chiều
                                     <br>- Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.</p>
                             </div>
-                            <div class="describe-right-button position-absolute bottom-0 end-0">
+                            <div class="describe-right-button bottom-0">
                                 <button class="button-describe">
                                     <div class="button-describe-block d-flex justify-content-center align-items-center">
                                         <div class="describe-more mr-16">Xem thêm</div>
@@ -468,11 +595,13 @@
                 </div>
             </div>
 
-            <!-- ĐĂNG KÝ TƯ VÁN SPS STANDARD -->
+            
+
+            <!-- ĐĂNG KÝ TƯ VẤN SPS STANDARD -->
             <div class="dangkytuvan">
-                <div class="dangkytuvan-standard pd-y-100">
-                    <div class="row">
-                        <div class="col">
+                <div class="dangkytuvan-standard">
+                    <div class="row dangkytuvan-block">
+                        <div class="col dangky-standard-block">
                             <form action="" class="dangky-standard">
                                 <div class="dangkytuvan-title">Đăng ký tư vấn</div>
                                 <label for="">Họ và tên bạn</label><br>
@@ -483,7 +612,7 @@
                                     <option value="">Chọn giải pháp/ ứng dụng bạn quan tâm</option>
                                     <option value="">Chọn giải pháp/ ứng dụng bạn quan tâm</option>
                                 </select>
-                                <div class="row">
+                                <div class="row block-information">
                                     <div class="col">
                                         <label for="">Email của bạn*</label><br>
                                         <input type="text" class="form-control form-control-sm">
@@ -497,7 +626,7 @@
                                         <input type="text" class="form-control form-control-sm">
                                     </div>
                                 </div>
-                                <div class="footer-header-button mt-5">
+                                <div class="footer-header-button">
                                     <button class="button-contact"><p>Đăng ký tư vấn</p></button>
                                 </div>
                             </form>
@@ -513,42 +642,33 @@
             <!-- Hướng dẫn sử dụng -->
             <div class="block-tintuc">
                 <div class="tintuc-title">Hướng dẫn sử dụng</div>
-                <div class="tintuc-container pd-y-100">
-                    <div class="tintuc-content-row d-flex justify-content-between">
+                <div class="tintuc-container">
+                    <div class="tintuc-content-row">
                         <div class="tintuc-content">
                             <div class="tintuc-img">
-                                <img src="./assets/images/trang-chu/tintuc-img1.png" alt="">
+                                <img src="./assets/images/trang-chu/tintucimg_1.svg" alt="">
                             </div>
                             <div class="tintuc-describe">
-                                <p>Quản lý và cộng tác bằng<br>
-                                    SharePoint Online</p>
-                            </div>
-                            <div class="tintuc-next">
-                                <img src="./assets/images/trang-chu/icon-xemthem.png" alt="">
+                                <p>SharePoint consulting allows handling your org’s disorganized workflows and poor communication,
+                                    and raise your current solution’s performance and adoption.</p>
                             </div>
                         </div>
                         <div class="tintuc-content">
                             <div class="tintuc-img">
-                                <img src="./assets/images/trang-chu/tintuc-img1.png" alt="">
+                                <img src="./assets/images/trang-chu/tintucimg_2.svg" alt="">
                             </div>
                             <div class="tintuc-describe">
-                                <p>Quản lý và cộng tác bằng<br>
-                                    SharePoint Online</p>
-                            </div>
-                            <div class="tintuc-next">
-                                <img src="./assets/images/trang-chu/icon-xemthem.png" alt="">
+                                <p>SharePoint portals are designed to support internal and external users in their everyday
+                                    activities as well as connect remote employees.</p>
                             </div>
                         </div>
                         <div class="tintuc-content">
                             <div class="tintuc-img">
-                                <img src="./assets/images/trang-chu/tintuc-img1.png" alt="">
+                                <img src="./assets/images/trang-chu/tintucimg_3.svg" alt="">
                             </div>
                             <div class="tintuc-describe">
-                                <p>Quản lý và cộng tác bằng<br>
-                                    SharePoint Online</p>
-                            </div>
-                            <div class="tintuc-next">
-                                <img src="./assets/images/trang-chu/icon-xemthem.png" alt="">
+                                <p>SharePoint development covers building SharePoint solutions and apps as well as individual features
+                                    like workflows, site templates, and more.</p>
                             </div>
                         </div>
                     </div>
@@ -567,7 +687,7 @@
                 <div class="business">
                     <div class="container-business">
                         <div class="business-block d-flex justify-content-between">
-                            <div class="business-left w-50">
+                            <div class="business-left">
                                 <div class="business-left-icon">
                                     <img src="./assets/images/trang-chu/enterprise-icon.png" alt="">
                                 </div>
@@ -578,7 +698,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="business-right w-50">
+                            <div class="business-right">
                                 <div class="business-right-describe d-flex align-items-center">
                                     <div class="business-right-icon">
                                         <img src="./assets/images/san-pham/enterprise/enterprise-icon1.png" alt="">
@@ -601,7 +721,7 @@
                                     </div>
                                     <div class="business-right-content">
                                         <p class="mb-0">Số hòa toàn bộ quy trình doanh nghiệp
-                                            - quy trình - thiết lập workfollow</p>
+                                            - quy trình - thiết lập workflow</p>
                                     </div>
                                 </div>
                                 <div class="business-right-describe d-flex align-items-center">
@@ -629,7 +749,7 @@
 
             <!-- Sản phẩm liên quan -->
             <div class="sanphamlienquan-container-standard">
-                <div class="sanphamlienquan-block d-flex justify-content-between pd-y-100">
+                <div class="sanphamlienquan-block d-flex justify-content-between">
                     <div class="sanphamlienquan-col-standard">
                         <div class="sanphamlienquan-icon">
                             <img src="./assets/images/san-pham/enterprise/enterprise-icon11.png" alt="">
@@ -671,7 +791,7 @@
                         <div class="sanphamlienquan-title">
                             <p>
                                 Quản lý tờ trình - quy trình -
-                                thiết lập workfollow
+                                thiết lập workflow
                             </p>
                         </div>
                         <div class="sanphamlienquan-content">
@@ -683,7 +803,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="sanphamlienquan-block d-flex justify-content-between pd-y-100">
+                <div class="sanphamlienquan-block d-flex justify-content-between">
                     <div class="sanphamlienquan-col-standard">
                         <div class="sanphamlienquan-icon">
                             <img src="./assets/images/san-pham/enterprise/enterprise-icon44.png" alt="">
@@ -728,26 +848,26 @@
             <!-- describe -->
             <div class="mb-5">
                 <!-- describe 1 -->
-                <div class="d-flex bg-white justify-content-center position-relative">
-                    <div class="describe d-flex">
-                        <div class="describe-left-block w-50 d-flex align-items-center"></div>
-                        <div class="describe-right-block w-50 d-flex align-items-center"></div>
-                    </div>
-                    <div class=" describe-content w-100 d-flex justify-content-between align-items-center position-absolute pd-y-100">
-                        <div class="describe-left-img">
-                                <img src="./assets/images/trang-chu/describe-img1.png" alt="">
+                <div class="describe-block bg-white">
+                    <div class="describe">
+                        <div class="describe-left-background"></div>
+                        <div class="describe-left-block position-absolute">
+                            <div class="describe-left-img">
+                                    <img src="./assets/images/trang-chu/describe-img1.png" alt="">
+                            </div>
                         </div>
+                    </div>
+                    <div class="describe-content w-100">
                         <div class="describe-right-content position-relative">
                             <div class="describe-right-title">
-                                <p class="mb-0">Quản lý mô hình quản trị chung
-                                    doanh nghiệp</p>
+                                <p class="mb-0">Quản lý mô hình quản trị chung doanh nghiệp</p>
                             </div>
                             <div class="describe-right-container">
                                 <p class="mb-0">- Khả năng tùy biến, tích hợp và mở rộng không giới hạn<br>
                                     - Giải pháp linh hoạt cho nhiều đối tượng và mô hình công ty một cách đa chiều<br>
                                     - Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.</p>
                             </div>
-                            <div class="describe-right-button position-absolute bottom-0 end-0">
+                            <div class="describe-right-button bottom-0">
                                 <button class="button-describe">
                                     <div class="button-describe-block d-flex justify-content-center align-items-center">
                                         <div class="describe-more mr-16">Xem thêm</div>
@@ -759,22 +879,18 @@
                     </div>
                 </div>
                 <!-- describe 2 -->
-                <div class="d-flex bg-white justify-content-center position-relative">
-                    <div class="describe d-flex justify-content-center">
-                        <div class="describe-left-block-2 w-50 d-flex align-items-center"></div>
-                        <div class="describe-right-block-2 w-50 d-flex align-items-center"></div>
-                    </div>
-                    <div class=" describe-content d-flex justify-content-between align-items-center position-absolute pd-y-100">
-                        <div class="describe-left-content-2 position-relative">
-                            <div class="describe-left-title-2 mb-0">
+                <div class="describe-block describe-block-2 bg-white">
+                    <div class="describe-left-content-2 w-100">
+                        <div class="describe-right-content position-relative">
+                            <div class="describe-right-title">
                                 <p class="mb-0">Quản lý mô hình dự án</p>
                             </div>
-                            <div class="describe-left-container-2">
+                            <div class="describe-right-container">
                                 <p class="mb-0">- Khả năng tùy biến, tích hợp và mở rộng không giới hạn
                                     <br>- Giải pháp linh hoạt cho nhiều đối tượng và mô hình công ty một cách đa chiều
                                     <br>- Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.</p>
                             </div>
-                            <div class="describe-left-button position-absolute bottom-0 start-0">
+                            <div class="describe-left-button bottom-0">
                                 <button class="button-describe-2">
                                     <div class="button-describe-block-2 d-flex justify-content-center align-items-center">
                                         <div class="describe-more-2 mr-16">Xem thêm</div>
@@ -783,32 +899,37 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="describe-right-img-2">
-                            <img src="./assets/images/trang-chu/describe-img2.png" alt="">
+                    </div>
+                    <div class="describe-2">
+                        <div class="describe-right-background"></div>
+                        <div class="describe-right-block position-absolute">
+                            <div class="describe-right-img">
+                                <img src="./assets/images/trang-chu/describe-img2.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- describe 3 -->
-                <div class="d-flex bg-white justify-content-center position-relative">
-                    <div class="describe d-flex">
-                        <div class="describe-left-block w-50 d-flex align-items-center"></div>
-                        <div class="describe-right-block w-50 d-flex align-items-center"></div>
-                    </div>
-                    <div class=" describe-content d-flex justify-content-between align-items-center position-absolute pd-y-100">
-                        <div class="describe-left-img">
-                            <img src="./assets/images/trang-chu/describe-img3.png" alt="">
+                <div class="describe-block bg-white">
+                    <div class="describe">
+                        <div class="describe-left-background"></div>
+                        <div class="describe-left-block position-absolute">
+                            <div class="describe-left-img">
+                                    <img src="./assets/images/trang-chu/describe-img1.png" alt="">
+                            </div>
                         </div>
+                    </div>
+                    <div class="describe-content w-100">
                         <div class="describe-right-content position-relative">
                             <div class="describe-right-title">
-                                <p class="mb-0">Số hòa toàn bộ quy trình doanh nghiệp
-                                    - quy trình - thiết lập workfollow</p>
+                                <p class="mb-0">Số hóa toàn bộ quy trình doanh nghiệp - quy trình - thiết lập workflow</p>
                             </div>
                             <div class="describe-right-container">
                                 <p class="mb-0">- Khả năng tùy biến, tích hợp và mở rộng không giới hạn
                                     <br>- Giải pháp linh hoạt cho nhiều đối tượng và mô hình công ty một cách đa chiều
                                     <br>- Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.</p>
                             </div>
-                            <div class="describe-right-button position-absolute bottom-0 end-0">
+                            <div class="describe-right-button bottom-0">
                                 <button class="button-describe">
                                     <div class="button-describe-block d-flex justify-content-center align-items-center">
                                         <div class="describe-more mr-16">Xem thêm</div>
@@ -820,22 +941,18 @@
                     </div>
                 </div>
                 <!-- describe 4 -->
-                <div class="d-flex bg-white justify-content-center position-relative">
-                    <div class="describe d-flex justify-content-center">
-                        <div class="describe-left-block-2 w-50 d-flex align-items-center"></div>
-                        <div class="describe-right-block-2 w-50 d-flex align-items-center"></div>
-                    </div>
-                    <div class=" describe-content d-flex justify-content-between align-items-center position-absolute pd-y-100">
-                        <div class="describe-left-content-2 position-relative">
-                            <div class="describe-left-title-2 mb-0">
+                <div class="describe-block describe-block-2 bg-white">
+                    <div class="describe-left-content-2 w-100">
+                        <div class="describe-right-content position-relative">
+                            <div class="describe-right-title">
                                 <p class="mb-0">Quản lý hiệu suất - chỉ tiêu - KPI/OPI</p>
                             </div>
-                            <div class="describe-left-container-2">
+                            <div class="describe-right-container">
                                 <p class="mb-0">- Khả năng tùy biến, tích hợp và mở rộng không giới hạn
                                     <br>- Giải pháp linh hoạt cho nhiều đối tượng và mô hình công ty một cách đa chiều
                                     <br>- Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.</p>
                             </div>
-                            <div class="describe-left-button position-absolute bottom-0 start-0">
+                            <div class="describe-left-button bottom-0">
                                 <button class="button-describe-2">
                                     <div class="button-describe-block-2 d-flex justify-content-center align-items-center">
                                         <div class="describe-more-2 mr-16">Xem thêm</div>
@@ -844,32 +961,37 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="describe-right-img-2">
-                            <img src="./assets/images/trang-chu/describe-img2.png" alt="">
+                    </div>
+                    <div class="describe-2">
+                        <div class="describe-right-background"></div>
+                        <div class="describe-right-block position-absolute">
+                            <div class="describe-right-img">
+                                <img src="./assets/images/trang-chu/describe-img2.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- describe 5 -->
-                <div class="d-flex bg-white justify-content-center position-relative">
-                    <div class="describe d-flex">
-                        <div class="describe-left-block w-50 d-flex align-items-center"></div>
-                        <div class="describe-right-block w-50 d-flex align-items-center"></div>
-                    </div>
-                    <div class=" describe-content d-flex justify-content-between align-items-center position-absolute pd-y-100">
-                        <div class="describe-left-img">
-                            <img src="./assets/images/trang-chu/describe-img3.png" alt="">
+                <div class="describe-block bg-white">
+                    <div class="describe">
+                        <div class="describe-left-background"></div>
+                        <div class="describe-left-block position-absolute">
+                            <div class="describe-left-img">
+                                    <img src="./assets/images/trang-chu/describe-img1.png" alt="">
+                            </div>
                         </div>
+                    </div>
+                    <div class="describe-content w-100">
                         <div class="describe-right-content position-relative">
                             <div class="describe-right-title">
-                                <p class="mb-0">Báo cáo biểu đồ( Power BI) - Tích hợp
-                                    đa chiều nền tảng ứng dụng</p>
+                                <p class="mb-0">Báo cáo biểu đồ (Power BI) - Tích hợp đa chiều nền tảng ứng dụng</p>
                             </div>
                             <div class="describe-right-container">
                                 <p class="mb-0">- Khả năng tùy biến, tích hợp và mở rộng không giới hạn
                                     <br>- Giải pháp linh hoạt cho nhiều đối tượng và mô hình công ty một cách đa chiều
                                     <br>- Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.</p>
                             </div>
-                            <div class="describe-right-button position-absolute bottom-0 end-0">
+                            <div class="describe-right-button bottom-0">
                                 <button class="button-describe">
                                     <div class="button-describe-block d-flex justify-content-center align-items-center">
                                         <div class="describe-more mr-16">Xem thêm</div>
@@ -884,9 +1006,9 @@
 
             <!-- ĐĂNG KÝ TƯ VÁN SPS STANDARD -->
             <div class="dangkytuvan">
-                <div class="dangkytuvan-standard pd-y-100">
-                    <div class="row">
-                        <div class="col">
+                <div class="dangkytuvan-standard">
+                    <div class="row dangkytuvan-block">
+                        <div class="col dangky-standard-block">
                             <form action="" class="dangky-standard">
                                 <div class="dangkytuvan-title">Đăng ký tư vấn</div>
                                 <label for="">Họ và tên bạn</label><br>
@@ -897,7 +1019,7 @@
                                     <option value="">Chọn giải pháp/ ứng dụng bạn quan tâm</option>
                                     <option value="">Chọn giải pháp/ ứng dụng bạn quan tâm</option>
                                 </select>
-                                <div class="row">
+                                <div class="row block-information">
                                     <div class="col">
                                         <label for="">Email của bạn*</label><br>
                                         <input type="text" class="form-control form-control-sm">
@@ -911,7 +1033,7 @@
                                         <input type="text" class="form-control form-control-sm">
                                     </div>
                                 </div>
-                                <div class="footer-header-button mt-5">
+                                <div class="footer-header-button">
                                     <button class="button-contact"><p>Đăng ký tư vấn</p></button>
                                 </div>
                             </form>
@@ -927,42 +1049,33 @@
             <!-- Hướng dẫn sử dụng -->
             <div class="block-tintuc">
                 <div class="tintuc-title">Hướng dẫn sử dụng</div>
-                <div class="tintuc-container pd-y-100">
-                    <div class="tintuc-content-row d-flex justify-content-between">
+                <div class="tintuc-container">
+                    <div class="tintuc-content-row">
                         <div class="tintuc-content">
                             <div class="tintuc-img">
-                                <img src="./assets/images/trang-chu/tintuc-img1.png" alt="">
+                                <img src="./assets/images/trang-chu/tintucimg_1.svg" alt="">
                             </div>
                             <div class="tintuc-describe">
-                                <p>Quản lý và cộng tác bằng<br>
-                                    SharePoint Online</p>
-                            </div>
-                            <div class="tintuc-next">
-                                <img src="./assets/images/trang-chu/icon-xemthem.png" alt="">
+                                <p>SharePoint consulting allows handling your org’s disorganized workflows and poor communication,
+                                    and raise your current solution’s performance and adoption.</p>
                             </div>
                         </div>
                         <div class="tintuc-content">
                             <div class="tintuc-img">
-                                <img src="./assets/images/trang-chu/tintuc-img1.png" alt="">
+                                <img src="./assets/images/trang-chu/tintucimg_2.svg" alt="">
                             </div>
                             <div class="tintuc-describe">
-                                <p>Quản lý và cộng tác bằng<br>
-                                    SharePoint Online</p>
-                            </div>
-                            <div class="tintuc-next">
-                                <img src="./assets/images/trang-chu/icon-xemthem.png" alt="">
+                                <p>SharePoint portals are designed to support internal and external users in their everyday
+                                    activities as well as connect remote employees.</p>
                             </div>
                         </div>
                         <div class="tintuc-content">
                             <div class="tintuc-img">
-                                <img src="./assets/images/trang-chu/tintuc-img1.png" alt="">
+                                <img src="./assets/images/trang-chu/tintucimg_3.svg" alt="">
                             </div>
                             <div class="tintuc-describe">
-                                <p>Quản lý và cộng tác bằng<br>
-                                    SharePoint Online</p>
-                            </div>
-                            <div class="tintuc-next">
-                                <img src="./assets/images/trang-chu/icon-xemthem.png" alt="">
+                                <p>SharePoint development covers building SharePoint solutions and apps as well as individual features
+                                    like workflows, site templates, and more.</p>
                             </div>
                         </div>
                     </div>
@@ -981,9 +1094,9 @@
                 <div class="business">
                     <div class="container-business">
                         <div class="business-block d-flex justify-content-between">
-                            <div class="business-left w-50">
+                            <div class="business-left">
                                 <div class="business-left-icon">
-                                    <img src="./assets/images/trang-chu/dichvu-icon.png" alt="">
+                                    <img src="./assets/images/san-pham/vedichvu/dichvu-icon.png" alt="">
                                 </div>
                                 <div class="business-left-content">Về dịch vụ:<br>
                                     <p>
@@ -991,7 +1104,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="business-right w-50">
+                            <div class="business-right">
                                 <div class="business-right-describe d-flex align-items-center">
                                     <div class="business-right-icon">
                                         <img src="./assets/images/san-pham/vedichvu/vedichvu1.png" alt="">
@@ -1016,7 +1129,7 @@
 
             <!-- Sản phẩm liên quan -->
             <div class="sanphamlienquan-container-standard">
-                <div class="sanphamlienquan-block d-flex justify-content-between pd-y-100">
+                <div class="sanphamlienquan-block d-flex justify-content-between">
                     <div class="sanphamlienquan-col-standard">
                         <div class="sanphamlienquan-icon">
                             <img src="./assets/images/san-pham/vedichvu/vedichvu11.png" alt="">
@@ -1050,7 +1163,21 @@
                             </p>
                         </div>
                     </div>
-                    <div class="sanphamlienquan-col-standard bg-white">
+                    <div class="sanphamlienquan-col-standard">
+                        <div class="sanphamlienquan-icon">
+                            <img src="./assets/images/san-pham/quanlycongviec-icon.png" alt="">
+                        </div>
+                        <div class="sanphamlienquan-title">
+                            <p>
+                                Quản lý công việc và dự án
+                            </p> 
+                        </div>
+                        <div class="sanphamlienquan-content">
+                            <p>Giao việc chủ trì & phối hợp<br>
+                                Quản lý công việc được giao<br>
+                                Nhắc nhở tự động<br>
+                                Báo cáo đa dạng & theo dõi tiến trình dự án</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1058,25 +1185,26 @@
             <!-- describe -->
             <div class="mb-5">
                 <!-- describe 1 -->
-                <div class="d-flex bg-white justify-content-center position-relative">
-                    <div class="describe d-flex">
-                        <div class="describe-left-block w-50 d-flex align-items-center"></div>
-                        <div class="describe-right-block w-50 d-flex align-items-center"></div>
-                    </div>
-                    <div class=" describe-content w-100 d-flex justify-content-between align-items-center position-absolute pd-y-100">
-                        <div class="describe-left-img">
-                                <img src="./assets/images/trang-chu/describe-img1.png" alt="">
+                <div class="describe-block bg-white">
+                    <div class="describe">
+                        <div class="describe-left-background"></div>
+                        <div class="describe-left-block position-absolute">
+                            <div class="describe-left-img">
+                                    <img src="./assets/images/trang-chu/describe-img1.png" alt="">
+                            </div>
                         </div>
+                    </div>
+                    <div class="describe-content w-100">
                         <div class="describe-right-content position-relative">
                             <div class="describe-right-title">
-                                <p class="mb-0">Microsoft SharePoint</p>
+                                <p class="mb-0">Microrosoft SharePoint</p>
                             </div>
                             <div class="describe-right-container">
                                 <p class="mb-0">- Khả năng tùy biến, tích hợp và mở rộng không giới hạn<br>
                                     - Giải pháp linh hoạt cho nhiều đối tượng và mô hình công ty một cách đa chiều<br>
                                     - Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.</p>
                             </div>
-                            <div class="describe-right-button position-absolute bottom-0 end-0">
+                            <div class="describe-right-button bottom-0">
                                 <button class="button-describe">
                                     <div class="button-describe-block d-flex justify-content-center align-items-center">
                                         <div class="describe-more mr-16">Xem thêm</div>
@@ -1088,22 +1216,18 @@
                     </div>
                 </div>
                 <!-- describe 2 -->
-                <div class="d-flex bg-white justify-content-center position-relative">
-                    <div class="describe d-flex justify-content-center">
-                        <div class="describe-left-block-2 w-50 d-flex align-items-center"></div>
-                        <div class="describe-right-block-2 w-50 d-flex align-items-center"></div>
-                    </div>
-                    <div class=" describe-content d-flex justify-content-between align-items-center position-absolute pd-y-100">
-                        <div class="describe-left-content-2 position-relative">
-                            <div class="describe-left-title-2 mb-0">
-                                <p class="mb-0">Microsoft Power BI</p>
+                <div class="describe-block describe-block-2 bg-white">
+                    <div class="describe-left-content-2 w-100">
+                        <div class="describe-right-content position-relative">
+                            <div class="describe-right-title">
+                                <p class="mb-0">Microrosoft Power BI</p>
                             </div>
-                            <div class="describe-left-container-2">
+                            <div class="describe-right-container">
                                 <p class="mb-0">- Khả năng tùy biến, tích hợp và mở rộng không giới hạn
                                     <br>- Giải pháp linh hoạt cho nhiều đối tượng và mô hình công ty một cách đa chiều
                                     <br>- Tất cả ứng dụng phần mềm đều được tích hợp với nhau trên một trình duyệt và thiết bị điện tử.</p>
                             </div>
-                            <div class="describe-left-button position-absolute bottom-0 start-0">
+                            <div class="describe-left-button bottom-0">
                                 <button class="button-describe-2">
                                     <div class="button-describe-block-2 d-flex justify-content-center align-items-center">
                                         <div class="describe-more-2 mr-16">Xem thêm</div>
@@ -1112,19 +1236,23 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="describe-right-img-2">
-                            <img src="./assets/images/trang-chu/describe-img2.png" alt="">
+                    </div>
+                    <div class="describe-2">
+                        <div class="describe-right-background"></div>
+                        <div class="describe-right-block position-absolute">
+                            <div class="describe-right-img">
+                                <img src="./assets/images/trang-chu/describe-img2.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-                
             </div>
 
             <!-- ĐĂNG KÝ TƯ VÁN SPS STANDARD -->
             <div class="dangkytuvan">
-                <div class="dangkytuvan-standard pd-y-100">
-                    <div class="row">
-                        <div class="col">
+                <div class="dangkytuvan-standard">
+                    <div class="row dangkytuvan-block">
+                        <div class="col dangky-standard-block">
                             <form action="" class="dangky-standard">
                                 <div class="dangkytuvan-title">Đăng ký tư vấn</div>
                                 <label for="">Họ và tên bạn</label><br>
@@ -1135,7 +1263,7 @@
                                     <option value="">Chọn giải pháp/ ứng dụng bạn quan tâm</option>
                                     <option value="">Chọn giải pháp/ ứng dụng bạn quan tâm</option>
                                 </select>
-                                <div class="row">
+                                <div class="row block-information">
                                     <div class="col">
                                         <label for="">Email của bạn*</label><br>
                                         <input type="text" class="form-control form-control-sm">
@@ -1149,7 +1277,7 @@
                                         <input type="text" class="form-control form-control-sm">
                                     </div>
                                 </div>
-                                <div class="footer-header-button mt-5">
+                                <div class="footer-header-button">
                                     <button class="button-contact"><p>Đăng ký tư vấn</p></button>
                                 </div>
                             </form>
@@ -1165,42 +1293,33 @@
             <!-- Hướng dẫn sử dụng -->
             <div class="block-tintuc">
                 <div class="tintuc-title">Hướng dẫn sử dụng</div>
-                <div class="tintuc-container pd-y-100">
-                    <div class="tintuc-content-row d-flex justify-content-between">
+                <div class="tintuc-container">
+                    <div class="tintuc-content-row">
                         <div class="tintuc-content">
                             <div class="tintuc-img">
-                                <img src="./assets/images/trang-chu/tintuc-img1.png" alt="">
+                                <img src="./assets/images/trang-chu/tintucimg_1.svg" alt="">
                             </div>
                             <div class="tintuc-describe">
-                                <p>Quản lý và cộng tác bằng<br>
-                                    SharePoint Online</p>
-                            </div>
-                            <div class="tintuc-next">
-                                <img src="./assets/images/trang-chu/icon-xemthem.png" alt="">
+                                <p>SharePoint consulting allows handling your org’s disorganized workflows and poor communication,
+                                    and raise your current solution’s performance and adoption.</p>
                             </div>
                         </div>
                         <div class="tintuc-content">
                             <div class="tintuc-img">
-                                <img src="./assets/images/trang-chu/tintuc-img1.png" alt="">
+                                <img src="./assets/images/trang-chu/tintucimg_2.svg" alt="">
                             </div>
                             <div class="tintuc-describe">
-                                <p>Quản lý và cộng tác bằng<br>
-                                    SharePoint Online</p>
-                            </div>
-                            <div class="tintuc-next">
-                                <img src="./assets/images/trang-chu/icon-xemthem.png" alt="">
+                                <p>SharePoint portals are designed to support internal and external users in their everyday
+                                    activities as well as connect remote employees.</p>
                             </div>
                         </div>
                         <div class="tintuc-content">
                             <div class="tintuc-img">
-                                <img src="./assets/images/trang-chu/tintuc-img1.png" alt="">
+                                <img src="./assets/images/trang-chu/tintucimg_3.svg" alt="">
                             </div>
                             <div class="tintuc-describe">
-                                <p>Quản lý và cộng tác bằng<br>
-                                    SharePoint Online</p>
-                            </div>
-                            <div class="tintuc-next">
-                                <img src="./assets/images/trang-chu/icon-xemthem.png" alt="">
+                                <p>SharePoint development covers building SharePoint solutions and apps as well as individual features
+                                    like workflows, site templates, and more.</p>
                             </div>
                         </div>
                     </div>
@@ -1211,9 +1330,7 @@
             
         </div>
 
-
-
-        <footer class="footer pd-y-100">
+        <div class="footer-header-block">
             <div class="footer-header">
                 <div class="footer-header-title">
                     <p>Giải pháp quản trị Doanh nghiệp</p>
@@ -1222,88 +1339,100 @@
                     <button class="button-contact"><p>Liên hệ tư vấn</p></button>
                 </div>
             </div>
+       </div>
+
+        <footer class="footer">
             <div class="footer-container">
-                <div class="footer-content d-flex justify-content-between">
-                    <div class="footer-content-column">
-                        <div class="footer-content-column-title">
-                            <p>Các giải pháp</p>
+                <div class="footer-content">
+                    <div class="footer-content-left">
+                        <div class="footer-content-column">
+                            <div class="footer-content-column-title">
+                                <p>Các giải pháp</p>
+                            </div>
+                            <div class="footer-content-column-describe">
+                                <ul class="list-unstyled fz-13">
+                                    <li>Giải pháp SharePoint</li>
+                                    <li>Ứng dụng kinh doanh và tự động hóa quy trình</li>
+                                    <li>Tích hợp Microsoft Teams</li>
+                                    <li>Hỗ trợ tỷ lệ cố định cho Microsoft 365</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="footer-content-column-describe">
-                            <ul class="list-unstyled fz-13">
-                                <li>Giải pháp SharePoint</li>
-                                <li>Ứng dụng kinh doanh và tự động hóa quy trình</li>
-                                <li>Tích hợp Microsoft Teams</li>
-                                <li>Hỗ trợ tỷ lệ cố định cho Microsoft 365</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-content-column">
-                        <div class="footer-content-column-title">
-                            <p>Công ty</p>
-                        </div>
-                        <div class="footer-content-column-describe">
-                            <ul class="list-unstyled fz-13">
-                                <li>Về chúng tôi</li>
-                                <li>Khách hàng của chúng tôi</li>
-                                <li>Quan hệ đối tác</li>
-                                <li>Nghề nghiệp</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-content-column">
-                        <div class="footer-content-column-title">
-                            <p>Văn phòng</p>
-                        </div>
-                        <div class="footer-content-column-describe">
-                            <ul class="list-unstyled fz-13">
-                                <li class="d-flex align-items-center">
-                                    <div class="vanphong-icon">
-                                        <img src="./assets/images/trang-chu/vp-mail.png" alt="">
-                                    </div>
-                                    <div class="vanphong-contact">
-                                        info@sps.com
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="vanphong-icon">
-                                        <img src="./assets/images/trang-chu/vp-phone.png" alt="">
-                                    </div>
-                                    <div class="vanphong-contact">
-                                        +84 666 6666
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="vanphong-icon">
-                                        <img src="./assets/images/trang-chu/vp-addr.png" alt="">
-                                    </div>
-                                    <div class="vanphong-contact">
-                                        Quan Nhân, Thanh Xuân, Hà Nội
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="footer-content-column">
+                            <div class="footer-content-column-title">
+                                <p>Công ty</p>
+                            </div>
+                            <div class="footer-content-column-describe">
+                                <ul class="list-unstyled fz-13">
+                                    <li>Về chúng tôi</li>
+                                    <li>Khách hàng của chúng tôi</li>
+                                    <li>Quan hệ đối tác</li>
+                                    <li>Nghề nghiệp</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="footer-content-column">
-                        <div class="footer-content-column-title">
-                            <p>Theo dõi chúng tôi</p>
+                    <div class="footer-content-right">
+                        <div class="footer-content-column">
+                            <div class="footer-content-column-title">
+                                <p>Văn phòng</p>
+                            </div>
+                            <div class="footer-content-column-describe">
+                                <ul class="list-unstyled fz-13">
+                                    <li class="d-flex align-items-center">
+                                        <div class="vanphong-icon">
+                                            <img src="./assets/images/trang-chu/vp-mail.png" alt="">
+                                        </div>
+                                        <div class="vanphong-contact">
+                                            thuy@gmail.com
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="vanphong-icon">
+                                            <img src="./assets/images/trang-chu/vp-phone.png" alt="">
+                                        </div>
+                                        <div class="vanphong-contact">
+                                            0978563386
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="vanphong-icon">
+                                            <img src="./assets/images/trang-chu/vp-addr.png" alt="">
+                                        </div>
+                                        <div class="vanphong-contact">
+                                            Quan Nhân, Thanh Xuân, Hà Nội
+                                        </div>
+                                    </li>
+                                    <li class="mobile-none">
+                                        <br>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="footer-content-column-describe">
-                            <ul class="d-flex justify-content-between list-unstyled fz-13">
-                                <li class="icon-follow">
-                                    <img src="./assets/images/trang-chu/fl-face.png" alt="">
-                                </li>
-                                <li class="icon-follow">
-                                    <img src="./assets/images/trang-chu/fl-twitter.png" alt="">
-                                </li>
-                                <li class="icon-follow">
-                                    <img src="./assets/images/trang-chu/fl-insta.png" alt="">
-                                </li>
-                                <li class="icon-follow">
-                                    <img src="./assets/images/trang-chu/fl-youtube.png" alt="">
-                                </li>
-                            </ul>
+                        <div class="footer-content-column footer-content-column_icon">
+                            <div class="footer-content-column-title">
+                                <p>Theo dõi chúng tôi</p>
+                            </div>
+                            <div class="footer-content-column-describe footer-content-column-describe_icon">
+                                <ul class="d-flex justify-content-between list-unstyled fz-13">
+                                    <li class="icon-follow">
+                                        <img src="./assets/images/trang-chu/fl-face.png" alt="">
+                                    </li>
+                                    <li class="icon-follow">
+                                        <img src="./assets/images/trang-chu/fl-twitter.png" alt="">
+                                    </li>
+                                    <li class="icon-follow">
+                                        <img src="./assets/images/trang-chu/fl-insta.png" alt="">
+                                    </li>
+                                    <li class="icon-follow">
+                                        <img src="./assets/images/trang-chu/fl-youtube.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                    
+                    
                 </div>
                 <div class="footer-sps-2022 mt-3">
                     <p>SPS © 2022 All Rights Reserved</p>

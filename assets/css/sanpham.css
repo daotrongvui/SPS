@@ -1,5 +1,5 @@
 #sanpham {
-    display: block;
+    display: none;
 }
 
 #standard {
@@ -11,8 +11,14 @@
 }
 
 #vedichvu {
-    display: none;
+    display: block;
 }
+
+
+.block-header-container {
+    width: 100%;
+}
+
 
 .subnav-sanpham {
     list-style-type: none;
@@ -77,6 +83,11 @@
     border-radius: 0 5px 5px 0;
 }
 
+.subnav-sanpham li a {
+    color: #404041;
+    text-decoration: none;
+}
+
 .subnav-sanpham li p {
     margin-bottom: 0;
 }
@@ -120,6 +131,11 @@ section.banner {
 /* THÂN TRANG SẢN PHẨM */
 
 /* quanlycongviec */
+.quanlycongviec-block {
+    padding: 0 100px;
+    margin-bottom: 50px;
+}
+
 .quanlycongviec {
     margin-top: 45px;
 }
@@ -163,6 +179,9 @@ section.banner {
     background-color: #F1F1F2;
     height: 550px;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .progress-block {
@@ -201,6 +220,20 @@ section.banner {
     color: #58595B;
 }
 
+.describe-content {
+    display: flex;
+    align-items: center;
+}
+
+.describe-right-content {
+    height: 360px;
+}
+
+.describe-left-content-2 {
+    display: flex;
+    align-items: center;
+}
+
 .describe-right-title {
     margin-bottom: 21px;
 }
@@ -213,8 +246,7 @@ section.banner {
 .sanphamlienquan-container {
     background-color: #F1F1F2;
     margin-top: 50px;
-    padding: 40px 0 0 0;
-    height: 455px;
+    padding: 40px 0 1px 0;
     margin-bottom: 60px;
 }
 
@@ -228,6 +260,7 @@ section.banner {
 
 .sanphamlienquan-block {
     margin-bottom: 60px;
+    padding: 0 100px;
 }
 
 .sanphamlienquan-col {
@@ -268,6 +301,14 @@ section.banner {
     height: auto;
 }
 
+.business-left {
+    width: 50%;
+}
+
+.business-right {
+    width: 50%;
+}
+
 .business-right-describe {
     background-color: #F1F1F2;
     color: #58595B;
@@ -288,12 +329,33 @@ section.banner {
 .dangkytuvan {
     background-color: #F1F1F2;
     padding: 40px 0;
+    margin-top: 60px;
+}
+
+.dangky-standard-block {
+    max-width: 50%;
+}
+
+.dangkytuvan-standard {
+    padding: 0 100px;
 }
 
 .dangkytuvan-title {
     font-family: GilroyBold, sans-serif;
     font-size: 30px;
     color: #FF4940;
+}
+
+.dangkytuvan-img {
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0;
+}
+
+.dangkytuvan-img img {
+    max-width: 100%;
 }
 
 .dangky-standard input,
@@ -317,9 +379,24 @@ section.banner {
 }
 
 /* Hướng dẫn sử dụng */
+
+.tintuc-container {
+    padding: 0 100px;
+}
+
 .tintuc-title {
     margin: 45px 0;
 }
+
+/* footer */
+.footer-header {
+    margin-top: 0;
+}
+
+.footer-header-button {
+    margin-top: 30px;
+}
+
 
 /* THÂN TRANG ENTERPRISE */
 
@@ -327,14 +404,466 @@ section.banner {
 
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023.9px) {
+
+    .header-sub-option-response {
+        align-items: center;
+        border-bottom: 1px solid #CFD1D2;
+        padding-right: 15px;
+    }
+
+    .header-sub-option-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 15px;
+        height: 60px;
+    }
+
+    .header-sub-option-response a {
+        text-decoration: none;
+        color: #414141;
+    }
+
+    #header-sub-option-bottom {
+        padding-right: 25px;
+        display: none;
+    }
+
+    .header-sub-option-bottom ul li {
+        list-style: none;
+        height: 40px;
+        border-top: 1px solid #CFD1D2;
+        display: flex;
+        align-items: center;
+    }
+
+
     
+    
+    section.banner {
+        width: auto;
+        max-height: 350px;
+        margin-top: 55px;
+    }
+
+    .container-banner {
+        display: block;
+        height: 100%;
+    }
+
+    .banner-content {
+        height: 350px;
+        justify-content: center;
+    }
+
+    .banner-content-title {
+        margin-bottom: 0;
+    }
+
+    .banner-content-container {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .banner-img {
+        height: 350px;
+        text-align: center;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .banner-img img {
+        max-width: 350px;
+        align-self: center;
+    }
+
+    .quanlycongviec-block {
+        padding: 0 50px;
+    }
+
+    .quanlycongviec-title p {
+        font-size: 24px;
+    }
+
+    .quanlycongviec-content p {
+        font-size: 16px;
+    }
+
+    .quanlycongviec-right img {
+        max-width: 80%;
+    }
+
+    .progress-container {
+        padding: 0 50px;
+    }
+
+    .progress-title p {
+        font-size: 17px;
+        line-height: 19px;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    .progress-content p {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .describe-right-content {
+        height: 260px;
+    }
+
+    .sanphamlienquan-title {
+        font-size: 24px;
+    }
+
+    .sanphamlienquan-title p {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .sanphamlienquan-content p {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .sanphamlienquan-block {
+        padding: 0 50px;
+    }
+
+    .sanphamlienquan-container {
+        margin-bottom: 30px;
+    }
+
+    .dangkytuvan-standard {
+        padding: 0 50px;
+    }
+
+    .dangkytuvan-title {
+        font-size: 24px;
+    }
+
+    .dangky-standard label {
+        font-size: 16px;
+    }
+
+    .tintuc-container {
+        padding: 0 50px;
+    }
+
+
+
+
+
+
+
+
+
+
 }
 
 
 
 
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
+    .header-sub-option-response {
+        align-items: center;
+        border-bottom: 1px solid #CFD1D2;
+        padding-right: 15px;
+    }
+
+    .header-sub-option-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 15px;
+        height: 60px;
+    }
+
+    .header-sub-option-response a {
+        text-decoration: none;
+        color: #414141;
+    }
+
+    #header-sub-option-bottom {
+        padding-right: 25px;
+        display: none;
+    }
+
+    .header-sub-option-bottom ul li {
+        list-style: none;
+        height: 40px;
+        border-top: 1px solid #CFD1D2;
+        display: flex;
+        align-items: center;
+    }
+
+
+
+
+
+
+
+
+
+    .container-banner {
+        display: block;
+    }
     
+    section.banner {
+        margin-top: 61px;
+        padding-top: 0;
+        height: 550px;
+    }
+
+    .banner-img {
+        height: auto;
+    }
+
+    .banner-content {
+        height: auto;
+    }
+
+    .banner-content-container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .banner-content-button {
+        display: none;
+    }
+
+    .banner-content-button-2 {
+        display: flex;
+    }
+
+    .quanlycongviec-block {
+        padding: 0 35px;
+    }
+
+    .quanlycongviec {
+        flex-direction: column;
+    }
+
+    .quanlycongviec-left {
+        width: 100%;
+    }
+    
+    .quanlycongviec-right {
+        width: 100%;
+    }
+
+    .quanlycongviec-title img {
+        width: 44px;
+    }
+
+    .quanlycongviec-title p {
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+    .quanlycongviec-content p {
+        font-size: 16px;
+    }
+
+    .quanlycongviec-right img {
+        max-width: 100%;
+    }
+
+    .progress-container {
+        flex-direction: column;
+        padding: 50px 35px 25px 35px;
+        height: auto;
+    }
+    
+    .progress-block {
+        width: 100%;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .progress-title p {
+        font-size: 20px;
+        line-height: 21px;
+        height: auto;
+    }
+
+    .progress-content p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .progress-block {
+        border-radius: 0;
+    }
+
+    .progress-img {
+        border-radius: 0;
+    }
+
+    .describe-right-content {
+        height: auto;
+    }
+
+    .sanphamlienquan-container {
+        margin-bottom: 30px;
+    }
+
+    .sanphamlienquan-title {
+        font-size: 24px;
+    }
+
+    .sanphamlienquan-block {
+        padding: 0 35px;
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    .sanphamlienquan-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sanphamlienquan-icon img {
+        height: 48px;
+    }
+
+    .sanphamlienquan-title p {
+        line-height: 24px;
+    }
+
+    /* Standard */
+
+    .standard-title {
+        font-size: 24px;
+        margin-top: 25px;
+    }
+
+    .business {
+        margin-bottom: 0;
+        padding-top: 20px;
+    }
+
+    .business-block {
+        flex-direction: column;
+    }
+
+    .business-left-icon img {
+        height: 41px;
+    }
+
+    .business-left {
+        width: 100%;
+    }
+
+    .business-right {
+        width: 100%;
+    }
+
+    .business-right-icon img {
+        height: 35px;
+    }
+
+    .sanphamlienquan-col-standard {
+        width: 100%;
+    }
+
+    .sanphamlienquan-icon img {
+        height: 40px;
+    }
+
+    .sanphamlienquan-col-standard {
+        margin-bottom: 20px;
+    }
+
+    .sanphamlienquan-container-standard {
+        margin-bottom: 20px;
+    }
+
+    .dangkytuvan-title {
+        text-align: center;
+    }
+
+    .dangkytuvan-standard {
+        padding: 0 35px;
+    }
+
+    .dangkytuvan-title {
+        font-size: 24px;
+    }
+
+    .dangkytuvan-block {
+        flex-direction: column;
+    }
+
+    .block-information {
+        flex-direction: column;
+    }
+
+    .dangkytuvan {
+        padding-bottom: 20px;
+    }
+
+    .dangkytuvan-img {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-top: 25px !important;
+    }
+
+    .footer-header-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .tintuc-title {
+        margin: 20px;
+    }
+
+    .tintuc-container {
+        padding: 0 35px;
+    }
+
+    .tintuc-content {
+        height: 110px;
+        box-shadow: 0px 0px 7px rgb(0 0 0 / 30%);
+    }
+
+    /* enterprise */
+
+    .sanphamlienquan-col-standard.bg-white {
+        display: none;
+    }
+
+
+    /* về dịch vụ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

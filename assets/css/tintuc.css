@@ -1,9 +1,11 @@
 #tintuc-post {
     display: block;
+    padding: 0 100px;
 }
 
 #tintuc-chitiet {
     display: none;
+    padding: 0 100px;
 }
 
 /* SECTION */
@@ -18,6 +20,11 @@ section.banner {
     background-position: center;
     flex-direction: column;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 100px;
 }
 
 .banner p {
@@ -29,6 +36,11 @@ section.banner {
 /* TINTUC container */
 .tintuc-container {
     margin-bottom: 35px;
+    padding: 0;
+}
+
+.tintuc-container-lienquan {
+    padding: 0 100px;
 }
 
 .tintuc-main {
@@ -105,8 +117,15 @@ section.banner {
 }
 
 .tintuc-block-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 45px;
+}
+
+.tintuc-block-list-mobile {
+    display: none;
 }
 
 .button-list {
@@ -213,6 +232,10 @@ section.banner {
     padding-top: 30px;
 }
 
+.tintuc-main-detail img {
+    width: 100%;
+}
+
 .tintuc-main-detail p {
     font-size: 20px;
     color: #58595B;
@@ -232,6 +255,10 @@ p.tintuc-main-detail-title {
     width: 100%;
     height: 1px;
     background-color: #808184;
+}
+
+.tintuc-share a {
+    margin-right: 15px;
 }
 
 .tintuc-share p {
@@ -281,14 +308,319 @@ button.button-giaiphap p {
 
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023.9px) {
+    section.banner {
+        margin-top: 55px;
+        padding: 0 50px;
+        height: 315px;
+    }
+
+    .banner p {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    #tintuc-post {
+        padding: 0 50px;
+    }
+
+    .tintuc-main-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .tintuc-main {
+        padding-right: 40px !important;
+    }
+
+    .tintuc-time-cmt {
+        width: 200px;
+    }
+
+    .tintuc-time {
+        padding-right: 20px;
+    }
+
+    .tintuc-time p {
+        font-size: 15px;
+    }
+
+    .tintuc-cmt p {
+        font-size: 15px;
+    }
+
+    .tintuc-main-describe p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .tintuc-cmt-content p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .tintuc-more p {
+        font-size: 16px;
+    }
+
+    .tintuc-more img {
+        height: 16px;
+    }
+
+    .tintuc-main-note p {
+        font-size: 16px;
+    }
+
+    .tintuc-sub-title p {
+        font-size: 21px;
+    }
+
+    .tintuc-sub.col-4 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .sub-content-title {
+        font-size: 14px;
+    }
+
+    .sub-content-main {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .tintuc-sub-main-img img {
+        width: 50px;
+    }
+
+
+    /* tin tức chi tiết */
+
+    #tintuc-chitiet {
+        padding: 0 50px;
+    }
+
+    .tintuc-main-detail img {
+        width: 100%;
+    }
+
+    p.tintuc-main-detail-title {
+        font-size: 20px !important;
+        line-height: 24px !important;
+    }
+
+    .tintuc-main-detail p {
+        font-size: 16px;
+        line-height: 19px;
+    }
     
+    .sub-giaiphap p {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    button.button-giaiphap p {
+        font-size: 13px;
+    }
+
+    .button-giaiphap {
+        width: 140px;
+    }
+
+
+
+
+
+
+
+
+
 }
 
 
 
 
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
+    section.banner {
+        margin-top: 61px;
+        height: 425px;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .banner p {
+        font-size: 24px;
+    }
+
+
+    .tintuc-block {
+        flex-direction: column;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .tintuc-main {
+        padding-top: 10;
+        width: 100% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .tintuc-main-title p {
+        font-size: 24px;
+    }
+
+    .tintuc-time p {
+        font-size: 16px;
+    }
+
+    .tintuc-cmt p {
+        font-size: 16px;
+    }
+
+    .tintuc-main-title {
+        margin-bottom: 10px;
+    }
+
+    #tintuc-post {
+        padding: 0 35px !important;
+    }
+
+    .tintuc-main {
+        padding-right: 0;
+    }
+
+    .tintuc-time-cmt {
+        width: 240px;
+    }
+
+    .tintuc-main-describe p {
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+    .tintuc-cmt-content p {
+        font-size: 16px;
+    }
+
+    .tintuc-more p {
+        font-size: 16px;
+    }
+
+    .tintuc-more img {
+        height: 15px;
+    }
+
+    .tintuc-sub {
+        padding-top: 30px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+        width: 100% !important;
+    }
+
+    .tintuc-block-list {
+        display: none;
+        height: 33px;
+    }
+    
+    .tintuc-block-list-mobile {
+        display: flex;
+    }
+
+
+
+
+    /* Tin tức chi tiết */
+
+    p.tintuc-main-detail-title {
+        font-size: 24px !important;
+        line-height: 29px !important;
+    }
+
+    .tintuc-main-detail p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .tintuc-main-detail img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
+    #tintuc-chitiet {
+        padding: 0 35px;
+    }
+
+    .tintuc-main-detail {
+        width: 100% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .tintuc-container-lienquan {
+        padding: 0 35px;
+    }
+
+    .tintuc-main-detail img {
+        
+    }
+
+    .tintuc-content {
+        flex-direction: column;
+        height: auto;
+        padding-left: 10px;
+    }
+
+    .tintuc-share a img {
+        height: 22px !important;
+        width: auto !important;
+        margin-right: 15px;
+    }
+
+    .tintuc-img {
+        width: auto;
+    }
+
+    .tintuc-sub-detail-block-container {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        width: 100% !important;
+    }
+
+    .tintuc-sub-title p {
+        font-size: 24px;
+    }
+
+    .sub-giaiphap {
+        display: none;
+    }
+
+    .tintuc-container-lienquan {
+        padding: 0 !important;
+    }
+
+    .tintuc-describe {
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .tintuc-next {
+        width: 100%;
+        justify-content: center;
+        flex-direction: initial;
+    }
+
+    .footer-header-block {
+        margin-top: 0;
+    }
+
+
+
+
+
+
     
 }

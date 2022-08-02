@@ -1,7 +1,14 @@
 /* SECTION */
+
+.block-container {
+    width: 1320px;
+}
+
 section.banner {
+    padding-right: 100px;
+    padding-left: 100px;
     margin-top: 81px;
-    padding-top: 81px;
+    padding-top: 51px;
     max-width: 1320px;
     height: 352px;
     background-image: url(../images/dang-ky-tu-van/banner-dangkytuvan.png);
@@ -21,7 +28,6 @@ section.banner {
     font-size: 30px;
     line-height: 35px;
     color: #fff;
-    margin-top: 30px;
 }
 
 .container-banner p {
@@ -29,12 +35,17 @@ section.banner {
 }
 
 /* Đăng ký ngay */
+.diadiem_container {
+    padding: 0 100px;
+}
+
 .diadiem {
     margin-top: 45px;
 }
 
 .dangky-container {
     width: 100%;
+    display: flex;
 }
 
 .diadiem p {
@@ -61,6 +72,7 @@ section.banner {
 
 .content-dangky {
     flex-basis: 100%;
+    padding-top: 100px;
 }
 
 input.hoten {
@@ -78,6 +90,12 @@ input.congty {
     border-radius: 5px;
     padding-left: 26px;
     margin: 21px 0;
+}
+
+.block-hoten-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 textarea.noidung {
@@ -117,14 +135,134 @@ textarea.noidung {
 
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023.9px) {
+    section.banner {
+        margin-top: 55px;
+    }
     
+    .container-banner p {
+        font-size: 25px;
+        line-height: 27px;
+    }
+
+    .diadiem_container {
+        padding: 0 50px;
+    }
+
+    .dangky-container {
+        flex-direction: column-reverse;
+    }
+
+    .content-dangky {
+        padding-top: 50px;
+    }
+
+    .button-send {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .diadiem p {
+        font-size: 20px;
+    }
+
+    .so-nha-dangky {
+        font-size: 16px;
+    }
+
+    .maps-img {
+        margin-top: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
 
 
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 767.9px) {
+    section.banner {
+        padding: 0;
+        margin-top: 61px;
+    }
+
+    .diadiem_container {
+        padding: 0 35px;
+    }
+
+    .container-banner p {
+        display: none;
+    }
+
+    .dangky-container {
+        flex-direction: column-reverse;
+    }
     
+    .content-dangky {
+        padding-top: 20px;
+    }
+
+    .gui-ngay {
+        font-size: 14px;
+        height: 35px;
+        width: 160px;
+    }
+
+    .block-hoten-email input {
+        height: 46px;
+        padding: 10px 0 10px 15px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .block-hoten-email {
+        flex-direction: column;
+    }
+
+    .button-send {
+        margin-top: 30px;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .diadiem p {
+        font-size: 24px;
+    }
+
+    .so-nha-dangky {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

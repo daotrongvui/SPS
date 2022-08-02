@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPS</title>
+    <link rel="icon" href="./assets/images/trang-chu/logoSPS.png">
+    <title>Công ty cổ phần công nghệ SPS VIỆT NAM</title>
     <link rel="stylesheet" href="./assets/css/trangchu.css">
     <link rel="stylesheet" href="./assets/css/dangkytuvan.css">
     <link rel="stylesheet" href="./assets/font">
@@ -13,10 +14,100 @@
     <script src="./assets/js/trangchu.js"></script>
 </head>
 <body class="container-xl d-flex justify-content-center">
+    <!-- MODAL MENU -->
+    <div id="modal_menu" class="modal_menu">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <div class="modal__inner">
+                <div class="submenu_header">
+                    <div class="icon_close_menu">
+                        <img src="./assets/images/close_submenu.png" alt="" onclick="menuHide()">
+                    </div>
+    
+                    <div id="header-main-submenu" class="header-main-submenu">
+                        <div class="">
+                            <ul class="menu_sub">
+                                <li class="header-sub-option"><a href="index.html">Trang chủ</a></li>
+                                <li class="header-sub-option"><a href="vechungtoi.html">Về chúng tôi</a></li>
+                                <li class="header-sub-option"><a href="sanpham.html">Sản phẩm</a></li>
+                                <li class="header-sub-option"><a href="tintuc.html">Tin tức</a></li>
+                                <li class="header-sub-option header-sub-option-dangkytuvan">
+                                    <a href="dangkytuvan.html">
+                                        <button>
+                                            <div>Đăng ký tư vấn</div>
+                                        </button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submenu_lienhe">
+                    <div class="footer-content-column-describe">
+                        <ul class="list-unstyled fz-13">
+                            <li class="d-flex align-items-center">
+                                <div class="vanphong-icon">
+                                    <img src="./assets/images/trang-chu/vp-mail.png" alt="">
+                                </div>
+                                <div class="vanphong-contact">
+                                    info@sps.com
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="vanphong-icon">
+                                    <img src="./assets/images/trang-chu/vp-phone.png" alt="">
+                                </div>
+                                <div class="vanphong-contact">
+                                    +84 666 6666
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="vanphong-icon">
+                                    <img src="./assets/images/trang-chu/vp-addr.png" alt="">
+                                </div>
+                                <div class="vanphong-contact">
+                                    Quan Nhân, Thanh Xuân, Hà Nội
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-content-column-describe footer-content-column-describe_icon">
+                        <ul class="d-flex justify-content-between list-unstyled fz-13">
+                            <li class="icon-follow">
+                                <img src="./assets/images/trang-chu/fl-face.png" alt="">
+                            </li>
+                            <li class="icon-follow">
+                                <img src="./assets/images/trang-chu/fl-twitter.png" alt="">
+                            </li>
+                            <li class="icon-follow">
+                                <img src="./assets/images/trang-chu/fl-insta.png" alt="">
+                            </li>
+                            <li class="icon-follow">
+                                <img src="./assets/images/trang-chu/fl-youtube.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
     <!-- HEADER -->
-    <header class="d-flex align-items-center justify-content-center">
-        <div class="container-xl container-header d-flex align-items-center justify-content-center pd-y-100 ">
-            <div class="block-header-container d-flex justify-content-between align-items-center w-100">
+    <header id="main_header">
+        
+        <div class="container-xl container-header d-flex align-items-center justify-content-center">
+            <div id="submenu-icon" class="submenu-icon" onclick="menuShow()">
+                <img src="./assets/images/sub_menu.png" alt="">
+            </div>
+            <div class="block-header-container w-100">
                 <div class="header-logo d-flex justify-content-between align-items-center">
                     <div class="header-logo-img">
                         <img src="./assets/images/trang-chu/logoSPS.png" alt="" srcset="">
@@ -25,7 +116,7 @@
                         <img src="./assets/images/trang-chu/Name-SPS.png" alt="">
                     </div>
                 </div>
-                <div class="header-main d-flex justify-content-between align-items-center">
+                <div id="header-main" class="header-main justify-content-between align-items-center">
                     <div class="d-flex justify-content-between align-items-center">
                         <ul class="menu d-flex justify-content-between align-items-center mb-0">
                             <li class="header-option"><a href="index.html">Trang chủ</a></li>
@@ -50,7 +141,7 @@
         
 
 
-        <section class="banner d-flex align-items-center justify-content-center pd-y-100">
+        <section id="banner" class="banner d-flex align-items-center justify-content-center">
             <div class="container-banner w-100">
                 <p>Nền tảng quản trị<br>
                 doanh nghiệp toàn diện</p>
@@ -61,12 +152,13 @@
         <div class="body-trangchu">
 
             <!-- Giới thiệu -->
-            <div class="pd-y-100">
-                <div class="diadiem">
-                    <p>Địa điểm</p>
-                </div>
-                <div class="dangky-container d-flex">
+            <div class="diadiem_container">
+                
+                <div class="dangky-container">
                     <div class="addr-dangky">
+                        <div class="diadiem">
+                            <p>Địa điểm</p>
+                        </div>
                         <p class="so-nha-dangky">
                             72A Nguyễn Trãi, Thượng Đình, 
                             Thanh Xuân, Hà Nội
@@ -76,7 +168,7 @@
                                 <img src="./assets/images/dang-ky-tu-van/phone.png" alt="">
                             </div>
                             <div class="phone-dangky-number">
-                                <p class="mb-0 so-nha-dangky">+48 0933 9999</p>
+                                <p class="mb-0 so-nha-dangky">0978563386</p>
                             </div>
                         </div>
                         <div class="mail-dangky phone-dangky d-flex align-items-center">
@@ -84,12 +176,12 @@
                                 <img src="./assets/images/dang-ky-tu-van/e-mail.png" alt="">
                             </div>
                             <div class="mail-dangky-number phone-dangky-number">
-                                <p class="mb-0 so-nha-dangky">support@spsvn.com</p>
+                                <p class="mb-0 so-nha-dangky">thuy@gmail.com</p>
                             </div>
                         </div>
                     </div>
                     <div class="content-dangky">
-                        <div class="block-hoten-email d-flex justify-content-between align-items-center">
+                        <div class="block-hoten-email">
                             <input type="text" class="hoten" placeholder="Họ tên">
                             <input type="text" class="email hoten" placeholder="Email">
                         </div>
@@ -107,93 +199,102 @@
             </div>
 
             <div class="maps-img mb-4">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.528071047448!2d105.786732!3d20.971459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xac3103d9423ec63!2zMjDCsDU4JzE3LjMiTiAxMDXCsDQ3JzEyLjIiRQ!5e0!3m2!1svi!2s!4v1655439112521!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.797912041846!2d105.81385521535432!3d21.000736394109296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac9ac0ec00ab%3A0x16d97a9a4e0ffde2!2zNzJBIMSQLiBOZ3V54buFbiBUcsOjaSwgVGjGsOG7o25nIMSQw6xuaCwgxJDhu5FuZyDEkGEsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1658828550398!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
         </div>
-        <footer class="footer pd-y-100">
+        <footer class="footer">
             <div class="footer-container">
-                <div class="footer-content d-flex justify-content-between">
-                    <div class="footer-content-column">
-                        <div class="footer-content-column-title">
-                            <p>Các giải pháp</p>
+                <div class="footer-content">
+                    <div class="footer-content-left">
+                        <div class="footer-content-column">
+                            <div class="footer-content-column-title">
+                                <p>Các giải pháp</p>
+                            </div>
+                            <div class="footer-content-column-describe">
+                                <ul class="list-unstyled fz-13">
+                                    <li>Giải pháp SharePoint</li>
+                                    <li>Ứng dụng kinh doanh và tự động hóa quy trình</li>
+                                    <li>Tích hợp Microsoft Teams</li>
+                                    <li>Hỗ trợ tỷ lệ cố định cho Microsoft 365</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="footer-content-column-describe">
-                            <ul class="list-unstyled fz-13">
-                                <li>Giải pháp SharePoint</li>
-                                <li>Ứng dụng kinh doanh và tự động hóa quy trình</li>
-                                <li>Tích hợp Microsoft Teams</li>
-                                <li>Hỗ trợ tỷ lệ cố định cho Microsoft 365</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-content-column">
-                        <div class="footer-content-column-title">
-                            <p>Công ty</p>
-                        </div>
-                        <div class="footer-content-column-describe">
-                            <ul class="list-unstyled fz-13">
-                                <li>Về chúng tôi</li>
-                                <li>Khách hàng của chúng tôi</li>
-                                <li>Quan hệ đối tác</li>
-                                <li>Nghề nghiệp</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-content-column">
-                        <div class="footer-content-column-title">
-                            <p>Văn phòng</p>
-                        </div>
-                        <div class="footer-content-column-describe">
-                            <ul class="list-unstyled fz-13">
-                                <li class="d-flex align-items-center">
-                                    <div class="vanphong-icon">
-                                        <img src="./assets/images/trang-chu/vp-mail.png" alt="">
-                                    </div>
-                                    <div class="vanphong-contact">
-                                        info@sps.com
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="vanphong-icon">
-                                        <img src="./assets/images/trang-chu/vp-phone.png" alt="">
-                                    </div>
-                                    <div class="vanphong-contact">
-                                        +84 666 6666
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="vanphong-icon">
-                                        <img src="./assets/images/trang-chu/vp-addr.png" alt="">
-                                    </div>
-                                    <div class="vanphong-contact">
-                                        Quan Nhân, Thanh Xuân, Hà Nội
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="footer-content-column">
+                            <div class="footer-content-column-title">
+                                <p>Công ty</p>
+                            </div>
+                            <div class="footer-content-column-describe">
+                                <ul class="list-unstyled fz-13">
+                                    <li>Về chúng tôi</li>
+                                    <li>Khách hàng của chúng tôi</li>
+                                    <li>Quan hệ đối tác</li>
+                                    <li>Nghề nghiệp</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="footer-content-column">
-                        <div class="footer-content-column-title">
-                            <p>Theo dõi chúng tôi</p>
+                    <div class="footer-content-right">
+                        <div class="footer-content-column">
+                            <div class="footer-content-column-title">
+                                <p>Văn phòng</p>
+                            </div>
+                            <div class="footer-content-column-describe">
+                                <ul class="list-unstyled fz-13">
+                                    <li class="d-flex align-items-center">
+                                        <div class="vanphong-icon">
+                                            <img src="./assets/images/trang-chu/vp-mail.png" alt="">
+                                        </div>
+                                        <div class="vanphong-contact">
+                                            thuy@gmail.com
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="vanphong-icon">
+                                            <img src="./assets/images/trang-chu/vp-phone.png" alt="">
+                                        </div>
+                                        <div class="vanphong-contact">
+                                            0978563386
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <div class="vanphong-icon">
+                                            <img src="./assets/images/trang-chu/vp-addr.png" alt="">
+                                        </div>
+                                        <div class="vanphong-contact">
+                                            Quan Nhân, Thanh Xuân, Hà Nội
+                                        </div>
+                                    </li>
+                                    <li class="mobile-none">
+                                        <br>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="footer-content-column-describe">
-                            <ul class="d-flex justify-content-between list-unstyled fz-13">
-                                <li class="icon-follow">
-                                    <img src="./assets/images/trang-chu/fl-face.png" alt="">
-                                </li>
-                                <li class="icon-follow">
-                                    <img src="./assets/images/trang-chu/fl-twitter.png" alt="">
-                                </li>
-                                <li class="icon-follow">
-                                    <img src="./assets/images/trang-chu/fl-insta.png" alt="">
-                                </li>
-                                <li class="icon-follow">
-                                    <img src="./assets/images/trang-chu/fl-youtube.png" alt="">
-                                </li>
-                            </ul>
+                        <div class="footer-content-column footer-content-column_icon">
+                            <div class="footer-content-column-title">
+                                <p>Theo dõi chúng tôi</p>
+                            </div>
+                            <div class="footer-content-column-describe footer-content-column-describe_icon">
+                                <ul class="d-flex justify-content-between list-unstyled fz-13">
+                                    <li class="icon-follow">
+                                        <img src="./assets/images/trang-chu/fl-face.png" alt="">
+                                    </li>
+                                    <li class="icon-follow">
+                                        <img src="./assets/images/trang-chu/fl-twitter.png" alt="">
+                                    </li>
+                                    <li class="icon-follow">
+                                        <img src="./assets/images/trang-chu/fl-insta.png" alt="">
+                                    </li>
+                                    <li class="icon-follow">
+                                        <img src="./assets/images/trang-chu/fl-youtube.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                    
+                    
                 </div>
                 <div class="footer-sps-2022 mt-3">
                     <p>SPS © 2022 All Rights Reserved</p>
